@@ -1,0 +1,24 @@
+---
+import EducationItem from './EducationItem.astro'
+
+const EXPERIENCE = [
+  {
+    title: 'Ingeniería en Tecnologías de la Información y Comunicaciones con especialidad en Desarrollo de Aplicaciones Avanzadas de Software',
+    school: 'Instituto Tecnológico De Aguascalientes',
+    date: 'Agosto 2020 — Presente',
+  },
+  {
+    title: 'Técnico en Programación',
+    school: 'Centro De Bachillerato Tecnológico Industrial y de Servicios (CBTis) #247',
+    date: 'Agosto 2017 — Julio 2020',
+  },
+]
+---
+
+<ol class='relative mt-16'>
+  {EXPERIENCE.map((experience) => (
+    <li class=''>
+      <EducationItem {...experience} />
+    </li>
+  ))}
+</ol>
