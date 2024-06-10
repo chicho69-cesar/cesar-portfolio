@@ -1,0 +1,43 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+
+const EXPERIENCE = [
+  {
+    title: 'Desarrollador de aplicaciones móviles',
+    company: 'Swopyn',
+    date: 'Enero 2024 — Presente',
+    descriptionItems: [
+      'He tenido una participación activa en el desarrollo de aplicaciones móviles y en la creación de servicios Back-End orientados a Microservicios.',
+      'Trabajo de la mano con equipos de diseño y producto para asegurar una entrega fluida y efectiva de las características.',
+      'Trabajo con tecnologías como: React, React Native, Java, Spring Boot, Docker y servicios en la nube con AWS.'
+    ]
+  },
+  {
+    title: 'Desarrollador Back-End practicante',
+    company: 'CADSITA, Instituto Tecnológico de Aguascalientes',
+    date: 'Agosto 2022 — Diciembre 2023',
+    descriptionItems: [
+      'Lidere un equipo de desarrollo para la creación de proyectos de emprendimiento, mi objetivo principal fue asegurar el uso de buenas prácticas, código limpio y escalabilidad.',
+      'Contribuí activamente al éxito continuo del equipo mediante la mentoría de nuevos miembros y la coordinación de tareas.'
+    ]
+  },
+  {
+    title: 'Servicio Social',
+    company: 'MOOC, TecNM',
+    date: 'Agosto 2022 — Enero 2023',
+    descriptionItems: [
+      'Diseñé y desarrollé una plataforma de educación inclusiva para personas con discapacidad.',
+      'El desarrollo fue echo con un especial enfoque en la accesibilidad siguiendo los estándares de la W3C, lo que nos permitió una mejora en la usabilidad de hasta un 40% para usuarios con diferentes discapacidades.',
+      'Colaboré con un equipo interdisciplinario para integrar funcionalidades que atendieran diversas necesidades educativas.'
+    ]
+  },
+]
+---
+
+<ol class='relative mt-16'>
+  {EXPERIENCE.map((experience) => (
+    <li class=''>
+      <ExperienceItem {...experience} />
+    </li>
+  ))}
+</ol>
