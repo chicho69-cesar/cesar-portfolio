@@ -3,11 +3,6 @@ import ThemeToggle from './ThemeToggle.astro'
 
 const navItems = [
   {
-    title: 'Sobre mí',
-    label: 'about-me',
-    url: '/#about-me',
-  },
-  {
     title: 'Experiencia',
     label: 'experience',
     url: '/#experience',
@@ -18,9 +13,9 @@ const navItems = [
     url: '/#projects',
   },
   {
-    title: 'Educación',
-    label: 'education',
-    url: '/#education',
+    title: 'Sobre mí',
+    label: 'about-me',
+    url: '/#about-me',
   },
   {
     title: 'Habilidades',
@@ -34,17 +29,18 @@ const navItems = [
   class='fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2'
 >
   <nav
-    class='flex px-1 md:px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center'
+    class='flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center'
   >
     {navItems.map((link) => (
       <a
-        class='relative block px-1 py-1 md:py-2 md:px-2 transition hover:text-yellow-500 dark:hover:text-yellow-400'
+        class='relative block py-2 px-2 transition hover:text-yellow-500 dark:hover:text-purple-700'
         aria-label={link.label}
         href={link.url}
       >
         {link.title}
       </a>
     ))}
+    
     <ThemeToggle />
   </nav>
 </header>
@@ -58,10 +54,20 @@ const navItems = [
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
+            const isDark = document.documentElement.classList[0] === 'dark'
+            
             if (item.getAttribute('aria-label') == entry.target.id) {
-              item.classList.add('text-yellow-500')
+              if (isDark) {
+                item.classList.add('text-purple-700')
+              } else {
+                item.classList.add('text-yellow-500')
+              }
             } else {
-              item.classList.remove('text-yellow-500')
+              if (isDark) {
+                item.classList.remove('text-purple-700')
+              } else {
+                item.classList.remove('text-yellow-500')
+              }
             }
           })
         }
