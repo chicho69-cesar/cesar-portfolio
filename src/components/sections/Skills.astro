@@ -1,0 +1,44 @@
+---
+import { SKILLS } from '@/data/skills'
+import SkillSection from './SkillSection.astro'
+---
+
+<div class='container mx-auto'>
+  <div class='grid grid-cols-12 gap-4'>
+    <article class='col-span-7 flex flex-col'>
+      <div class='h-full flex items-center justify-center'>
+        <SkillSection
+          title='Front-End y Móvil'
+          skills={SKILLS.frontend}
+        />
+      </div>
+    </article>
+
+    <article class='col-span-5 flex flex-col'>
+      <div class='h-full flex items-center justify-center'>
+        <SkillSection
+          title='Bases de Datos'
+          skills={SKILLS.databases}
+        />
+      </div>
+    </article>
+
+    <article class='col-span-6 flex flex-col'>
+      <div class='h-full flex items-center justify-center'>
+        <SkillSection
+          title='Desarrollo'
+          skills={SKILLS.dev}
+        />
+      </div>
+    </article>
+
+    <article class='col-span-6 flex flex-col'>
+      <div class='h-full flex items-center justify-center'>
+        <SkillSection
+          title='Back-End'
+          skills={SKILLS.backend}
+        />
+      </div>
+    </article>
+  </div>
+</div>

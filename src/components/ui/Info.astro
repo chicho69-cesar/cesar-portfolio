@@ -15,17 +15,19 @@ import Book from '@/icons/social/Book.astro'
       src='/me.webp'
       alt=''
       class='w-2/3 mx-auto rounded-lg shadow-md inline-block -mt-28'
+      width='300'
+      height='300'
     >
   </picture>
 
   <div class='w-full flex flex-col items-center justify-start'>
-    <h3 class='text-center text-xl mb-2 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500'>
+    <h3 class='text-center text-xl mb-2 dark:[&>strong]:text-purple-500 [&>strong]:text-yellow-500'>
       Hola, soy <strong>César Villalobos Olmos</strong>
     </h3>
   
     <Badge>
       <a href='https://linkedin.com/in/cesarvillalobosolmos/' target='_blank'>
-        Desarrollador Full-Stack
+        Disponible para trabajar
       </a>
     </Badge>
   
@@ -35,6 +37,8 @@ import Book from '@/icons/social/Book.astro'
           href='https://linkedin.com/in/cesarvillalobosolmos/'
           role='link'
           target='_blank'
+          title='LinkedIn'
+          aria-label='LinkedIn'
           class='text-white bg-[#0a66c2] hover:bg-[#006097] hover:scale-105 hover:-translate-y-1 inline-flex items-center justify-center gap-2 p-2 transition border rounded-full focus-visible:ring-yellow-500/80 text-md group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2'
         >
           <LinkedIn />
@@ -46,6 +50,8 @@ import Book from '@/icons/social/Book.astro'
           href='https://github.com/chicho69-cesar'
           role='link'
           target='_blank'
+          title='GitHub'
+          aria-label='GitHub'
           class='text-white bg-black hover:scale-105 hover:-translate-y-1 inline-flex items-center justify-center gap-2 p-2 transition border rounded-full focus-visible:ring-yellow-500/80 text-md group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2'
         >
           <GitHub />
@@ -57,6 +63,8 @@ import Book from '@/icons/social/Book.astro'
           href='mailto:cesarvillalobosolmos.01@gmail.com'
           role='link'
           target='_blank'
+          title='Correo Electrónico'
+          aria-label='Correo Electrónico'
           class='text-white bg-yellow-500 hover:bg-yellow-400 hover:scale-105 hover:-translate-y-1 inline-flex items-center justify-center gap-2 p-2 transition border rounded-full focus-visible:ring-yellow-500/80 text-md group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2'
         >
           <Mail />

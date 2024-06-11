@@ -1,0 +1,37 @@
+---
+import HackatonItem from './HackatonItem.astro'
+
+const HACKATONS = [
+  {
+    title: 'Hackaton Cybersecurity INCYTEA 2023',
+    place: 'Aguascalientes, Ags. México',
+    date: 'Marzo 2023'
+  },
+  {
+    title: 'Concurso de Programación',
+    place: 'Guadalajara, Jal. México',
+    position: 'Ganador del #2 Lugar',
+    date: 'Mayo 2020'
+  },
+  {
+    title: 'Concurso de Prototipos de Innovación Tecnológica',
+    place: 'Puerto Vallarta, Jal. México',
+    position: 'Ganador del #1 Lugar',
+    date: 'Marzo 2020'
+  },
+  {
+    title: 'Concurso de Prototipos',
+    place: 'Teocaltiche, Jal. México',
+    position: 'Ganador del #1 Lugar',
+    date: 'Noviembre 2019'
+  },
+]
+---
+
+<ol class='relative mt-16'>
+  {HACKATONS.map((hackaton) => (
+    <li class=''>
+      <HackatonItem {...hackaton} />
+    </li>
+  ))}
+</ol>
