@@ -1,5 +1,5 @@
 import AWS from '@/icons/tech/AWS.astro'
-import Astro from '@/icons/tech/Astro.astro'
+import AstroIcon from '@/icons/tech/AstroIcon.astro'
 import Docker from '@/icons/tech/Docker.astro'
 import Firebase from '@/icons/tech/Firebase.astro'
 import Flask from '@/icons/tech/Flask.astro'
@@ -15,7 +15,7 @@ export const TAGS = {
   ASTRO: {
     name: 'Astro',
     class: 'bg-[#000] text-white',
-    icon: Astro
+    icon: AstroIcon
   },
   AWS: {
     name: 'AWS',
