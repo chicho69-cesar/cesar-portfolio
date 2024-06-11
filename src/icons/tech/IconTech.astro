@@ -1,0 +1,13 @@
+---
+export interface Props {
+  icon: string
+}
+
+const { icon } = Astro.props as Props
+const { default: innerHTML } = await import(`${icon}?raw`)
+---
+
+<Fragment
+  set:html={innerHTML}
+  class='block object-cover h-12'
+/>
