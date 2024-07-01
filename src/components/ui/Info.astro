@@ -7,6 +7,10 @@ import GitHub from '@/icons/social/GitHub.astro'
 import Mail from '@/icons/social/Mail.astro'
 import Location from '@/icons/social/Location.astro'
 import Book from '@/icons/social/Book.astro'
+import { getLangFromUrl } from '@/i18n/utils'
+import { info } from '@/i18n/ui'
+
+const lang = getLangFromUrl(Astro.url)
 ---
 
 <section class='w-full'>
@@ -22,12 +26,12 @@ import Book from '@/icons/social/Book.astro'
 
   <div class='w-full flex flex-col items-center justify-start'>
     <h3 class='text-center text-lg md:text-xl mb-2 dark:[&>strong]:text-purple-500 [&>strong]:text-yellow-500'>
-      Hola, soy <strong>César Villalobos Olmos</strong>
+      {info[lang].name} <strong>César Villalobos Olmos</strong>
     </h3>
   
     <Badge>
       <a href='https://linkedin.com/in/cesarvillalobosolmos/' target='_blank'>
-        Disponible para trabajar
+        {info[lang].available}
       </a>
     </Badge>
   
@@ -74,7 +78,7 @@ import Book from '@/icons/social/Book.astro'
   
     <LinkButton href='/cv.pdf' isForDownload>
       <Download class='size-4' />
-      Descargar CV
+      {info[lang].download}
     </LinkButton>
 
     <section class='w-full bg-gray-100 dark:bg-gray-900 rounded-md mt-6'>
@@ -85,11 +89,11 @@ import Book from '@/icons/social/Book.astro'
 
         <div class='flex-1'>
           <h4 class='text-xs md:text-sm font-semibold'>
-            Ubicación:
+            {info[lang].location}
           </h4>
 
           <p>
-            Aguascalientes, México
+            {info[lang].locationValue}
           </p>
         </div>
       </article>
@@ -101,11 +105,11 @@ import Book from '@/icons/social/Book.astro'
 
         <div class='flex-1'>
           <h4 class='text-xs md:text-sm font-semibold'>
-            Carrera:
+            {info[lang].career}
           </h4>
 
           <p>
-            Ingeniería en TIC's
+            {info[lang].careerValue}
           </p>
         </div>
       </article>

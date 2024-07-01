@@ -1,24 +1,21 @@
+---
+import { aboutMe } from '@/i18n/sections'
+import { getLangFromUrl } from '@/i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+---
+
 <div class='[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-purple-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty'>
   <p>
-    ¡Hola! Soy Cesar Villalobos Olmos, pero mis amigos me llaman chicho. 
-    Soy desarrollador Full-Stack e ingeniero en TIC's, comencé en este 
-    mundo de la programación gracias a mi curiosidad por los videojuegos 
-    y <strong>hoy trabajo en el desarrollo por pasión y amor a la tecnología</strong>.
+    {aboutMe[lang].paragraph1} <strong>{aboutMe[lang].paragraph1Highlight1}</strong>.
   </p>
 
   <p>
-    Gracias a la programación he tenido la oportunidad de <strong>vivir experiencias 
-    increíbles, conocer personas maravillosas y estar lugares únicos</strong>, 
-    he trabajado en proyectos como freelance, con equipos en entornos empresariales y 
-    he tenido la oportunidad de competir en concursos que me han ayudado 
-    a llegar hasta donde estoy hoy.
+    {aboutMe[lang].paragraph2Sec1} <strong>{aboutMe[lang].paragraph2Highlight1}</strong>, {aboutMe[lang].paragraph2Sec2}
   </p>
 
   <p>
-    <strong>Me encanta compartir conocimientos y aprender de otros</strong>, 
-    siempre he creído firmemente que el trabajo en equipo es la clave del 
-    éxito. Si estás buscando a alguien con <strong>pasión, 
-    creatividad y conocimiento</strong>, me encantaría conectar contigo 
-    y ver cómo puedo contribuir a tu próximo proyecto.
+    <strong>{aboutMe[lang].paragraph3Highlight1}</strong>, {aboutMe[lang].paragraph3Sec1}
+    <strong>{aboutMe[lang].paragraph3Highlight2}</strong>, {aboutMe[lang].paragraph3Sec2}
   </p>
 </div>

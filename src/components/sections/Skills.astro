@@ -1,6 +1,9 @@
 ---
 import { SKILLS } from '@/data/skills'
 import SkillSection from './SkillSection.astro'
+import { getLangFromUrl } from '@/i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
 ---
 
 <div class='container mx-auto'>
@@ -8,7 +11,7 @@ import SkillSection from './SkillSection.astro'
     <article class='col-span-7 flex flex-col'>
       <div class='h-full flex items-center justify-center'>
         <SkillSection
-          title='Front-End y Móvil'
+          title={lang === 'es' ? 'Front-End y Móvil' : 'Front-End and Mobile'}
           skills={SKILLS.frontend}
         />
       </div>
@@ -17,7 +20,7 @@ import SkillSection from './SkillSection.astro'
     <article class='col-span-5 flex flex-col'>
       <div class='h-full flex items-center justify-center'>
         <SkillSection
-          title='Bases de Datos'
+          title={lang === 'es' ? 'Bases de Datos' : 'Databases'}
           skills={SKILLS.databases}
         />
       </div>
@@ -26,7 +29,7 @@ import SkillSection from './SkillSection.astro'
     <article class='col-span-6 flex flex-col'>
       <div class='h-full flex items-center justify-center'>
         <SkillSection
-          title='Desarrollo'
+          title={lang === 'es' ? 'Desarrollo y DevOps' : 'Development and DevOps'}
           skills={SKILLS.dev}
         />
       </div>

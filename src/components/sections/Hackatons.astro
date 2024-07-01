@@ -1,29 +1,32 @@
 ---
+import { getLangFromUrl } from '@/i18n/utils'
 import HackatonItem from './HackatonItem.astro'
+
+const lang = getLangFromUrl(Astro.url)
 
 const HACKATONS = [
   {
-    title: 'Hackaton Cybersecurity INCYTEA 2023',
+    title: lang === 'es' ? 'Hackaton Cybersecurity INCYTEA 2023' : 'Cybersecurity INCYTEA 2023 Hackaton',
     place: 'Aguascalientes, Ags. México',
-    date: 'Marzo 2023'
+    date: lang === 'es' ? 'Marzo 2023' : 'March 2023',
   },
   {
-    title: 'Concurso de Programación',
+    title: lang === 'es' ? 'Concurso de Programación' : 'Programming Contest',
     place: 'Guadalajara, Jal. México',
-    position: 'Ganador del #2 Lugar',
-    date: 'Mayo 2020'
+    position: lang === 'es' ? 'Ganador del #2 Lugar' : 'Winner of #2 Place',
+    date: lang === 'es' ? 'Mayo 2020' : 'May 2020'
   },
   {
-    title: 'Concurso de Prototipos de Innovación Tecnológica',
+    title: lang === 'es' ? 'Concurso de Prototipos de Innovación Tecnológica' : 'Technological Innovation Prototypes Contest',
     place: 'Puerto Vallarta, Jal. México',
-    position: 'Ganador del #1 Lugar',
-    date: 'Marzo 2020'
+    position: lang === 'es' ? 'Ganador del #1 Lugar' : 'Winner of #1 Place',
+    date: lang === 'es' ? 'Marzo 2020' : 'March 2020'
   },
   {
-    title: 'Concurso de Prototipos',
+    title: lang === 'es' ? 'Concurso de Prototipos' : 'Prototypes Contest',
     place: 'Teocaltiche, Jal. México',
-    position: 'Ganador del #1 Lugar',
-    date: 'Noviembre 2019'
+    position: lang === 'es' ? 'Ganador del #1 Lugar' : 'Winner of #1 Place',
+    date: lang === 'es' ? 'Noviembre 2019' : 'November 2019'
   },
 ]
 ---
