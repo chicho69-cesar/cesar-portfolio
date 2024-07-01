@@ -1,24 +1,28 @@
 ---
+import { getLangFromUrl } from '@/i18n/utils'
 import ThemeToggle from './ThemeToggle.astro'
+import LanguageToggle from './LanguageToggle.astro'
+
+const lang = getLangFromUrl(Astro.url)
 
 const navItems = [
   {
-    title: 'Experiencia',
+    title: lang === 'es' ? 'Experiencia' : 'Experience',
     label: 'experience',
     url: '/#experience',
   },
   {
-    title: 'Proyectos',
+    title: lang === 'es' ? 'Proyectos' : 'Projects',
     label: 'projects',
     url: '/#projects',
   },
   {
-    title: 'Sobre mí',
+    title: lang === 'es' ? 'Sobre mí' : 'About me',
     label: 'about-me',
     url: '/#about-me',
   },
   {
-    title: 'Habilidades',
+    title: lang === 'es' ? 'Habilidades' : 'Skills',
     label: 'skills',
     url: '/#skills',
   }
@@ -42,6 +46,7 @@ const navItems = [
     ))}
     
     <ThemeToggle />
+    <LanguageToggle />
   </nav>
 </header>
 

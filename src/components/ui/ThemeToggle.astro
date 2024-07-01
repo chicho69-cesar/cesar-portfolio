@@ -2,8 +2,10 @@
 import SunIcon from '@/icons/general/Sun.astro'
 import MoonIcon from '@/icons/general/Moon.astro'
 import SystemIcon from '@/icons/general/System.astro'
+import { getLangFromUrl } from '@/i18n/utils'
 
 const THEMES = ['Light', 'Dark', 'System']
+const lang = getLangFromUrl(Astro.url)
 ---
 
 <div class='relative ml-1 mr-1'>
@@ -11,7 +13,9 @@ const THEMES = ['Light', 'Dark', 'System']
     id='theme-toggle-btn'
     class='appearance-none border-none flex hover:scale-125 transition'
   >
-    <span class='sr-only'>Elige el tema</span>
+    <span class='sr-only'>
+      {lang === 'es' ? 'Cambiar tema' : 'Change theme'}
+    </span>
 
     <SunIcon
       id='light'
