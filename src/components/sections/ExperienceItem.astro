@@ -1,5 +1,7 @@
 ---
 import Link from '@/components/ui/Link.astro'
+import { getLangFromUrl } from '@/i18n/utils'
+import ShowMoreExperience from '@/islands/ShowMoreExperience'
 
 interface Props {
   title: string
@@ -7,9 +9,11 @@ interface Props {
   descriptionItems: string[]
   link?: string
   date: string
+  more?: string[]
 }
 
-const { title, company, descriptionItems, link, date } = Astro.props
+const { title, company, descriptionItems, link, date, more } = Astro.props
+const lang = getLangFromUrl(Astro.url)
 ---
 
 <div
@@ -35,6 +39,14 @@ const { title, company, descriptionItems, link, date } = Astro.props
         </li>
       ))}
     </ul>
+
+    {more && (
+      <ShowMoreExperience
+        client:load
+        items={more}
+        {lang}
+      />
+    )}
     
     {link && (
       <Link href={link}>
