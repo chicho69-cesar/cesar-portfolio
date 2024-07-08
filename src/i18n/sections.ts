@@ -22,3 +22,16 @@ export const aboutMe = {
     paragraph3Highlight2: 'passion, creativity and knowledge',
   },
 } as any
+
+export const certifications = {
+  'es': {
+    emittedBy: 'Emitida por: ',
+    issueDate: 'Fecha de emisión: ',
+    expirationDate: 'Fecha de expiración: '
+  },
+  'en': {
+    emittedBy: 'Emitted by: ',
+    issueDate: 'Issue date: ',
+    expirationDate: 'Expiration date: '
+  },
+} as any

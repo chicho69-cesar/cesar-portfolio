@@ -8,7 +8,8 @@ export const titles = {
     aboutMe: 'About Me',
     education: 'Education',
     skills: 'Technical Skills',
-    hackatons: 'Contests / Hackatons'
+    hackatons: 'Contests / Hackatons',
+    certifications: 'Certifications'
   },
   'es': {
     whoAmi: '¿Quién soy?',
@@ -19,6 +20,7 @@ export const titles = {
     aboutMe: 'Sobre mí',
     education: 'Educación',
     skills: 'Habilidades Técnicas',
-    hackatons: 'Concursos / Hackatones'
+    hackatons: 'Concursos / Hackatones',
+    certifications: 'Certificaciones'
   }
 } as any
