@@ -1,0 +1,49 @@
+---
+import { getLangFromUrl } from '@/i18n/utils'
+import { certifications as translates } from '@/i18n/sections'
+import { CERTIFICATIONS } from '@/data/certifications'
+import type { Certification } from '@/types/certification'
+
+const lang = getLangFromUrl(Astro.url)
+const certifications = CERTIFICATIONS[lang] as Certification[]
+---
+
+<div class='flex flex-col gap-y-12'>
+  {certifications.map(({ title, emittedBy, issueDate, image, expirationDate }) => (
+    <article class='flex flex-col'>
+      <div class='w-full'>
+        <div class=''>
+          <img
+            alt={title}
+            class='object-cover object-top md:object-center w-full rounded-lg border-[0.125px] border-gray-300 dark:border-gray-700'
+            loading='lazy'
+            decoding='async'
+            src={image}
+          />
+        </div>
+      </div>
+
+      <div class='w-full mt-4'>
+        <h3 class='w-full text-base text-center md:text-xl text-balance lg:text-2xl font-bold text-gray-800 dark:text-gray-100'>
+          {title}
+        </h3>
+
+        <h4 class='mt-2 text-pretty text-center text-gray-700 dark:text-gray-300'>
+          <span class='font-bold'>{translates[lang].emittedBy}</span>{emittedBy}
+        </h4>
+        
+        <div class='w-full flex flex-row flex-nowrap justify-center gap-4 items-center'>
+          <p class='text-pretty text-gray-700 dark:text-gray-300'>
+            <span class='font-bold'>{translates[lang].issueDate}</span>{issueDate}
+          </p>
+          
+          {expirationDate && (
+            <p class='text-pretty text-gray-700 dark:text-gray-300'>
+              <span class='font-bold'>{translates[lang].expirationDate}</span>{expirationDate}
+            </p>
+          )}
+        </div>
+      </div>
+    </article>
+  ))}
+</div>
