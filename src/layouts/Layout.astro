@@ -1,16 +1,23 @@
 ---
 import '@fontsource-variable/onest'
 
-import { ViewTransitions } from 'astro:transitions'
 import Info from '@/components/ui/Info.astro'
 import Navbar from '@/components/ui/Navbar.astro'
+import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
 	title: string
-	description: string
+  description: string
+  keywords?: string
+  imageFullUrl?: string
 }
 
-const { description, title } = Astro.props
+const {
+  title,
+  description,
+  keywords = '',
+  imageFullUrl = '',
+} = Astro.props
 ---
 
 <!doctype html>
@@ -19,9 +26,32 @@ const { description, title } = Astro.props
 		<meta charset='UTF-8' />
 		<meta name='description' content={description} />
 		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
+    <meta
+      name='keywords'
+      content={`Cesar, Programación, Desarrollo Web, Full-Stack Developer, Mobile App Developer, Web Developer, Front-End Developer, Back-End Developer, Java, JavaScript, React, React Native, TypeScript, C#, Spring, ASP.NET ${keywords}`}
+    />
+    <meta
+      name='author'
+      content='Cesar Villalobos Olmos'
+    />
+    <meta name='robots' content='index, follow' />
+    <meta http-equiv='Content-Language' content='en' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <!-- <meta http-equiv='refresh' content='5url=https://chicho-portfolio.vercel.app/es/'> -->
+    <link rel='canonical' href='https://chicho-portfolio.vercel.app/es/' />
+
+    <meta name='twitter:card' content='summary' />
+    <meta name='twitter:site' content='@chicho69_cesar' />
+    <meta name='twitter:title' content={title} />
+    <meta name='twitter:description' content={description} />
+    <meta name='twitter:image' content={imageFullUrl} />
+
+    <meta name='og:title' content={title} />
+    <meta name='og:description' content={description} />
+    {imageFullUrl && <meta name='og:image' content={imageFullUrl} />}
 		
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<title>{title}</title>
 
 		<ViewTransitions />
