@@ -1,0 +1,65 @@
+---
+import SunIcon from '@/assets/icons/general/sun.svg'
+import MoonIcon from '@/assets/icons/general/moon.svg'
+---
+
+<button
+  id='theme-toggle-btn'
+  class='border-none transition flex justify-center items-center rounded cursor-pointer hover:*:-rotate-[30deg]'
+>
+  <span class='sr-only'>Toggle Theme</span>
+
+  <SunIcon
+    id='light'
+    class='hidden dark:block size-6 transition-all text-neutral-800 dark:text-neutral-200'
+  />
+
+  <MoonIcon
+    id='dark'
+    class='block dark:hidden size-6 transition-all text-neutral-800 dark:text-neutral-200'
+  />
+</button>
+
+<script is:inline>
+  let remove = null
+  const matchMedia = window.matchMedia('(prefers-color-scheme: dark)')
+
+  const getThemePreference = () => {
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem('theme') ?? 'system'
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  }
+
+  const updateTheme = () => {
+    if (remove != null) {
+      remove()
+    }
+
+    matchMedia.addEventListener('change', updateTheme)
+
+    remove = () => {
+      matchMedia.removeEventListener('change', updateTheme)
+    }
+
+    const themePreference = getThemePreference()
+
+    const isDark =
+      themePreference === 'dark' ||
+      (themePreference === 'system' && matchMedia.matches)
+
+    document.documentElement.classList[isDark ? 'add' : 'remove']('dark')
+  }
+
+  updateTheme()
+
+  document.getElementById('theme-toggle-btn').addEventListener('click', () => {
+    const currentTheme = getThemePreference()
+    localStorage.setItem('theme', currentTheme === 'dark' ? 'light' : 'dark')
+
+    updateTheme()
+  })
+</script>
