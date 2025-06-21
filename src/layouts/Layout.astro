@@ -2,7 +2,7 @@
 import '@/styles/global.css';
 import '@fontsource-variable/onest';
 
-// import Navbar from '@/components/ui/Navbar.astro'
+import Navbar from '@/components/ui/Navbar.astro'
 import { ClientRouter } from 'astro:transitions'
 
 interface Props {
@@ -16,7 +16,7 @@ const { title, description, keywords = '', imageFullUrl = '' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='en' class='dark'>
   <head>
     <meta charset='UTF-8' />
     <meta name='description' content={description} />
@@ -52,13 +52,11 @@ const { title, description, keywords = '', imageFullUrl = '' } = Astro.props;
 
   <body class='relative text-black dark:text-white'>
     <div
-      class='absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]'
-    >
-    </div>
+      class="fixed inset-0 -z-10 h-full w-full bg-neutral-100 dark:bg-neutral-900 selection:bg-neutral-200 dark:selection:bg-neutral-700 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    ></div>
 
-    <main>
+    <main class='w-full py-12 mx-auto container lg:max-w-5xl md:max-w-4xl'>
+      <Navbar />
       <slot />
     </main>
 
