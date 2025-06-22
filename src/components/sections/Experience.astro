@@ -1,0 +1,66 @@
+---
+import { getLangFromUrl } from '@/i18n/utils'
+import SectionContainer from '../ui/SectionContainer.astro'
+import ExperienceItem from '@/components/structure/ExperienceItem.astro'
+import Briefcase from '@/assets/icons/general/briefcase.svg'
+
+const lang = getLangFromUrl(Astro.url)
+
+const EXPERIENCE = [
+  {
+    title: lang === 'es' ? 'Desarrollador Full-Stack' : 'Full-Stack Developer',
+    company: 'Swopyn Business Software Solutions',
+    link: 'https://swopyn.biofin.mx/',
+    date: lang === 'es' ? 'Enero 2024 — Presente' : 'January 2024 — Present',
+    descriptionItems: lang === 'es' ? [
+      'Desarrollo y mantenimiento de aplicaciones web profesionales con Angular y de aplicaciones móviles multiplataforma usando React Native, implementando interfaces intuitivas, accesibles y centradas en la experiencia del usuario, así como el manejo de funcionalidades nativas como la cámara, sensores biométricos y GPS.',
+      'Implementación de pruebas unitarias, de integración y end-to-end para garantizar la calidad del software desde la etapa de desarrollo hasta la de producción.',
+      'Participación activa con multiples equipos siguiendo metodologías ágiles como Scrum, para asegurar una entrega fluida y efectiva de las características de los productos.',
+      'Diseño, construcción y consumo de APIs RESTful con Python y Django, integradas con bases de datos relaciones MySQL, asegurando un flujo de datos eficiente, seguro y escalable.',
+      'Implementación de multiples entornos de desarrollo, testing y producción utilizando Docker y servicios en la nube a través de AWS.',
+      'Uso de herramientas de control de versiones con Git y GitHub para la gestión eficiente del código y el trabajo colaborativo, aplicando GitFlow para la gestión del flujo de trabajo.',
+    ] : [
+      'Development and maintenance of professional web applications with Angular and cross-platform mobile applications using React Native, implementing intuitive, accessible, and user-centered interfaces, as well as handling native functionalities such as the camera, biometric sensors, and GPS.',
+      'Implementation of unit, integration, and end-to-end testing to ensure software quality from the development stage to production.',
+      'Active participation with multiple teams following agile methodologies such as Scrum, to ensure a smooth and effective delivery of product features.',
+      'Design, construction, and consumption of RESTful APIs with Python and Django, integrated with relational MySQL databases, ensuring an efficient, secure, and scalable data flow.',
+      'Implementation of multiple development, testing, and production environments using Docker and cloud services through AWS.',
+      'Use of version control tools with Git and GitHub for efficient code management and collaborative work, applying GitFlow for workflow management.'
+    ],
+  },
+  {
+    title: lang === 'es' ? 'Desarrollador web practicante' : 'Web Developer Intern',
+    company: 'Tecnológico Nacional de México, TecNM',
+    link: 'https://mooc.tecnm.mx/',
+    date: lang === 'es' ? 'Marzo 2023 — Diciembre 2023' : 'March 2023 — December 2023',
+    descriptionItems: lang === 'es' ? [
+      'Lideré el desarrollo de proyectos web enfocados en la educación inclusiva, priorizando buenas prácticas, accesibilidad y escalabilidad.',
+      'Diseñé plataformas enfocadas en la experiencia del usuario y estándares de accesibilidad (W3C), logrando mejoras medibles de la usabilidad de las aplicaciones.',
+      'Coordiné tareas, mentoricé a nuevos miembros e hice exposiciones sobre el funcionamiento de los proyectos desarrollando, fomentando la inclusión en el área de la tecnología.',
+      'Tecnologías utilizadas: HTML, CSS, JavaScript, React, Git y GitHub.',
+    ] : [
+      'I led the development of web projects focused on inclusive education, prioritizing best practices, accessibility, and scalability.',
+      'I designed platforms focused on user experience and accessibility standards (W3C), achieving measurable improvements in application usability.',
+      'I coordinated tasks, mentored new members, and gave presentations on the functioning of the developed projects, promoting inclusion in the technology field.',
+      'Technologies used: HTML, CSS, JavaScript, React, Git, and GitHub.'
+    ],
+  },
+]
+---
+
+<SectionContainer id='experience' class='mt-12'>
+  <h2
+    class='flex items-center mb-3 md:mb-6 text-xl md:text-3xl font-semibold gap-x-4 md:gap-x-8 text-black/80 dark:text-white'
+  >
+    <Briefcase class='size-8' />
+    Experiencia
+  </h2>
+
+  <ol class='relative mt-8'>
+    {EXPERIENCE.map((experience) => (
+      <li class=''>
+        <ExperienceItem {...experience} />
+      </li>
+    ))}
+  </ol>
+</SectionContainer>
