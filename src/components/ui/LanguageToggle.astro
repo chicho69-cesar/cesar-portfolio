@@ -1,5 +1,7 @@
 ---
 import { getLangFromUrl } from '@/i18n/utils'
+import EN from '@/assets/icons/flags/en.svg'
+import ES from '@/assets/icons/flags/es.svg'
 
 const LANGUAGES = ['Español', 'English']
 const lang = getLangFromUrl(Astro.url)
@@ -17,18 +19,14 @@ const lang = getLangFromUrl(Astro.url)
     <span class='hidden' id='language'>{lang}</span>
 
     {lang === 'es' ? (
-      <img
-        src='/icons/es.svg'
-        alt='Español'
+      <ES
         id='es'
-        class='language-toggle-icon size-6 transition-all'
+        class='language-toggle-icon size-5 md:size-6 transition-all'
       />
     ) : (
-      <img
-        src='/icons/en.svg'
-        alt='English'
+      <EN
         id='en'
-        class='language-toggle-icon size-6 transition-all'
+        class='language-toggle-icon size-5 md:size-6 transition-all'
       />
     )}
   </button>
@@ -39,7 +37,7 @@ const lang = getLangFromUrl(Astro.url)
   >
     <ul>
       {LANGUAGES.map((language) => (
-        <li class='language-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm'>
+        <li class='language-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm text-neutral-800 dark:text-neutral-200'>
           {language}
         </li>
       ))}

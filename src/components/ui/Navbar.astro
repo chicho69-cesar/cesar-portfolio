@@ -26,21 +26,21 @@ const navItems = [
     label: 'skills',
     url: `/${lang}/#skills`,
   },
-  {
-    title: lang === 'es' ? 'Certificaciones' : 'Certifications',
-    label: 'certifications',
-    url: `/${lang}/#certifications`,
-  },
+  // {
+  //   title: lang === 'es' ? 'Certificaciones' : 'Certifications',
+  //   label: 'certifications',
+  //   url: `/${lang}/#certifications`,
+  // },
 ]
 ---
 
-<header id='header-navbar' class='w-full mb-8 z-10 sticky top-4 left-0 py-2 px-4 border border-neutral-300/60 dark:border-neutral-700/60 rounded-full'>
-  <nav class='w-full flex justify-between items-center gap-6'>
-    <ul class='flex flex-row justify-start items-center gap-3'>
+<header id='header-navbar' class='w-full mb-8 z-10 sticky top-2 left-0 py-1 px-2 md:py-2 md:px-4 border border-neutral-300/60 dark:border-neutral-700/60 rounded-full'>
+  <nav class='w-full flex justify-between items-center gap-3 md:gap-6'>
+    <ul class='flex flex-row justify-start items-center gap-1 md:gap-3'>
       {navItems.map((link) => (
         <li>
           <a
-            class='relative block py-1 px-2 transition hover:text-yellow-500 dark:hover:text-purple-700 font-semibold text-sm text-neutral-800 dark:text-neutral-200'
+            class='relative block py-1 px-2 transition hover:text-yellow-500 dark:hover:text-purple-700 font-semibold text-xs md:text-sm text-neutral-800 dark:text-neutral-200'
             aria-label={link.label}
             href={link.url}
           >
@@ -50,7 +50,7 @@ const navItems = [
       ))}
     </ul>
 
-    <div class='flex flex-row justify-end items-center gap-2'>
+    <div class='flex flex-row justify-end items-center gap-1 md:gap-2'>
       <ThemeToggle />
       <LanguageToggle />
     </div>
