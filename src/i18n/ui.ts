@@ -17,4 +17,4 @@ export const info = {
     career: 'Carrera:',
     careerValue: 'Ingeniería en TIC\'s',
   }
-} as any
+}

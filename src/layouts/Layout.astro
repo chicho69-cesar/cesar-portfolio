@@ -1,44 +1,37 @@
 ---
-import '@fontsource-variable/onest'
+import '@/styles/global.css';
+import '@fontsource-variable/onest';
 
-import Info from '@/components/ui/Info.astro'
 import Navbar from '@/components/ui/Navbar.astro'
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 
 interface Props {
-	title: string
-  description: string
-  keywords?: string
-  imageFullUrl?: string
+  title: string;
+  description: string;
+  keywords?: string;
+  imageFullUrl?: string;
 }
 
-const {
-  title,
-  description,
-  keywords = '',
-  imageFullUrl = '',
-} = Astro.props
+const { title, description, keywords = '', imageFullUrl = '' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta name='description' content={description} />
-		<meta name='viewport' content='width=device-width' />
-		<meta name='generator' content={Astro.generator} />
+<html lang='en' class='dark'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content={description} />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    
     <meta
       name='keywords'
       content={`Cesar, Programación, Desarrollo Web, Full-Stack Developer, Mobile App Developer, Web Developer, Front-End Developer, Back-End Developer, Java, JavaScript, React, React Native, TypeScript, C#, Spring, ASP.NET ${keywords}`}
     />
-    <meta
-      name='author'
-      content='Cesar Villalobos Olmos'
-    />
+
+    <meta name='author' content='Cesar Villalobos Olmos' />
     <meta name='robots' content='index, follow' />
     <meta http-equiv='Content-Language' content='en' />
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <!-- <meta http-equiv='refresh' content='5url=https://chicho-portfolio.vercel.app/es/'> -->
     <link rel='canonical' href='https://chicho-portfolio.vercel.app/es/' />
 
     <meta name='twitter:card' content='summary' />
@@ -50,41 +43,33 @@ const {
     <meta name='og:title' content={title} />
     <meta name='og:description' content={description} />
     {imageFullUrl && <meta name='og:image' content={imageFullUrl} />}
-		
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<title>{title}</title>
 
-		<ViewTransitions />
-	</head>
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <title>{title}</title>
 
-	<body class='relative text-black dark:text-white'>
-		<div
-      class='absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]'
-    />
+    <ClientRouter />
+  </head>
 
-		<main class='w-full mx-auto container lg:max-w-6xl md:max-w-4xl flex flex-row flex-wrap items-start gap-2 md:gap-6 px-4'>
-			<aside class="bg-white dark:bg-[#030712] mt-36 md:mt-32 rounded-lg shadow p-6 w-full md:w-1/3 md:sticky md:top-32">
-				<Info />
-			</aside>
+  <body class='relative text-black dark:text-white'>
+    <div
+      class="fixed inset-0 -z-10 h-full w-full bg-neutral-100 dark:bg-neutral-900 selection:bg-neutral-200 dark:selection:bg-neutral-700 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    ></div>
 
-			<div class="flex-1 flex justify-center mt-8 md:mt-32">
-				<Navbar />
+    <main class='w-[90%] py-12 mx-auto container md:max-w-4xl'>
+      <Navbar />
+      
+      <div class='w-full flex flex-col gap-16'>
+        <slot />
+      </div>
+    </main>
 
-				<section class="w-full bg-white dark:bg-[#030712] rounded-lg shadow p-6">
-					<slot />
-				</section>
-			</div>
-		</main>
-
-		<style is:global>
+    <style is:global>
       :root {
         color-scheme: light dark;
       }
 
       html {
-        font-family: "Onest Variable", system-ui, sans-serif;
+        font-family: 'Onest Variable', system-ui, sans-serif;
         scroll-behavior: smooth;
       }
 
@@ -107,52 +92,6 @@ const {
           color: rgba(255, 255, 255, 0.9);
         }
       }
-
-      #header-nav {
-        animation: blur linear both 0.5s;
-        animation-timeline: scroll();
-        animation-range: 0 500px;
-      }
-
-      @keyframes blur {
-        to {
-          backdrop-filter: blur(20px);
-          border-width: 1px;
-          border-color: rgba(0, 0, 0);
-          padding: 0.25rem 0.75rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          background-color: rgb(229, 229, 229);
-          border-radius: 9999px;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        @keyframes blur {
-          from {
-            border: 0px;
-          }
-          to {
-            box-shadow:
-              0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-              0px 0px 0 1px rgba(0, 0, 0, 0.3);
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(20px);
-            border-width: 1px;
-            border-color: rgba(0, 0, 0);
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 9999px;
-          }
-        }
-      }
     </style>
-	</body>
+  </body>
 </html>

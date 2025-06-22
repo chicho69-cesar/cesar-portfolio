@@ -1,17 +1,18 @@
-import { defineConfig } from 'astro/config'
+// @ts-check
+import { defineConfig } from 'astro/config';
 
-import tailwind from '@astrojs/tailwind'
-import robotsTxt from 'astro-robots-txt'
-import react from '@astrojs/react'
-import vercel from '@astrojs/vercel/serverless'
+import tailwindcss from '@tailwindcss/vite';
+
+import react from '@astrojs/react';
+
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    robotsTxt(),
-    react()
-  ],
-  output: 'server',
+  vite: {
+    plugins: [tailwindcss()]
+  },
+
+  integrations: [react()],
   adapter: vercel()
-})
+});

@@ -1,109 +1,66 @@
 ---
 import { getLangFromUrl } from '@/i18n/utils'
-import ExperienceItem from './ExperienceItem.astro'
+import SectionContainer from '../ui/SectionContainer.astro'
+import ExperienceItem from '@/components/structure/ExperienceItem.astro'
+import Briefcase from '@/assets/icons/general/briefcase.svg'
 
 const lang = getLangFromUrl(Astro.url)
 
 const EXPERIENCE = [
   {
-    title: lang === 'es' ? 'Desarrollador de aplicaciones móviles' : 'Mobile Applications Developer',
-    company: 'Swopyn',
+    title: lang === 'es' ? 'Desarrollador Full-Stack' : 'Full-Stack Developer',
+    company: 'Swopyn Business Software Solutions',
+    link: 'https://swopyn.biofin.mx/',
     date: lang === 'es' ? 'Enero 2024 — Presente' : 'January 2024 — Present',
     descriptionItems: lang === 'es' ? [
-      'He tenido una participación activa en el desarrollo de aplicaciones móviles y en la creación de servicios Back-End orientados a Microservicios.',
-      'Trabajo de la mano con equipos de diseño y producto para asegurar una entrega fluida y efectiva de las características.',
-      'Trabajo con tecnologías como: React, React Native, Java, Spring Boot, Docker, Kubernetes, AWS, Git, GitHub, SQLite y MySQL.'
+      'Desarrollo y mantenimiento de aplicaciones web profesionales con Angular y de aplicaciones móviles multiplataforma usando React Native, implementando interfaces intuitivas, accesibles y centradas en la experiencia del usuario, así como el manejo de funcionalidades nativas como la cámara, sensores biométricos y GPS.',
+      'Implementación de pruebas unitarias, de integración y end-to-end para garantizar la calidad del software desde la etapa de desarrollo hasta la de producción.',
+      'Participación activa con multiples equipos siguiendo metodologías ágiles como Scrum, para asegurar una entrega fluida y efectiva de las características de los productos.',
+      'Diseño, construcción y consumo de APIs RESTful con Python y Django, integradas con bases de datos relaciones MySQL, asegurando un flujo de datos eficiente, seguro y escalable.',
+      'Implementación de multiples entornos de desarrollo, testing y producción utilizando Docker y servicios en la nube a través de AWS.',
+      'Uso de herramientas de control de versiones con Git y GitHub para la gestión eficiente del código y el trabajo colaborativo, aplicando GitFlow para la gestión del flujo de trabajo.',
     ] : [
-      'I have had an active participation in the development of mobile applications and in the creation of Back-End services oriented to Microservices.',
-      'I work hand in hand with design and product teams to ensure a smooth and effective delivery of the features.',
-      'I work with technologies such as: React, React Native, Java, Spring Boot, Docker, Kubernetes, AWS, Git, GitHub, SQLite and MySQL.'
+      'Development and maintenance of professional web applications with Angular and cross-platform mobile applications using React Native, implementing intuitive, accessible, and user-centered interfaces, as well as handling native functionalities such as the camera, biometric sensors, and GPS.',
+      'Implementation of unit, integration, and end-to-end testing to ensure software quality from the development stage to production.',
+      'Active participation with multiple teams following agile methodologies such as Scrum, to ensure a smooth and effective delivery of product features.',
+      'Design, construction, and consumption of RESTful APIs with Python and Django, integrated with relational MySQL databases, ensuring an efficient, secure, and scalable data flow.',
+      'Implementation of multiple development, testing, and production environments using Docker and cloud services through AWS.',
+      'Use of version control tools with Git and GitHub for efficient code management and collaborative work, applying GitFlow for workflow management.'
     ],
-    more: lang === 'es' ? [
-      'Planificación y ejecución de actividades dentro del proyecto.',
-      'Trabajo bajo la metodología ágil Scrum.',
-      'Colaboración estrecha con equipos de diseño y producto para asegurar una entrega fluida y efectiva del producto.',
-      'Desarrollo de aplicaciones móviles utilizando React Native.',
-      'Enfoque en la optimización de la experiencia de usuario (UX) y el diseño de la interfaz de usuario (UI)',
-      'Implementación de bases de datos locales para aplicaciones móviles mediante SQLite.',
-      'Uso de recursos nativos de los dispositivos móviles, como la cámara, sensores biométricos y GPS, para mejorar la funcionalidad y la seguridad de las aplicaciones.',
-      'Desarrollo de pruebas unitarias, de integración y E2E.',
-      'Uso de herramientas de control de versiones para la gestión del código y la colaboración en el equipo.',
-      'Desarrollo, prueba y despliegue de servicios API RESTful.',
-      'Uso de Docker para la gestión de imágenes y contenedores, mejorando la portabilidad y la consistencia de los entornos de desarrollo.',
-      'Trabajo con servicios en la nube con AWS, optimizando el rendimiento y la escalabilidad de las aplicaciones.',
-    ] : [
-      'Planning and execution of activities within the project.',
-      'Work under the agile Scrum methodology.',
-      'Close collaboration with design and product teams to ensure a smooth and effective delivery of the product.',
-      'Development of mobile applications using React Native.',
-      'Focus on optimizing the user experience (UX) and user interface (UI) design.',
-      'Implementation of local databases for mobile applications using SQLite.',
-      'Use of native resources of mobile devices, such as the camera, biometric sensors and GPS, to improve the functionality and security of applications.',
-      'Development of unit, integration and E2E tests.',
-      'Use of version control tools for code management and team collaboration.',
-      'Development, testing and deployment of RESTful API services.',
-      'Use of Docker for managing images and containers, improving the portability and consistency of development environments.',
-      'Work with cloud services with AWS, optimizing the performance and scalability of applications.',
-    ]
   },
   {
-    title: lang === 'es' ? 'Desarrollador Back-End practicante' : 'Back-End Developer Intern',
-    company: 'CADSITA, Instituto Tecnológico de Aguascalientes',
-    date: lang === 'es' ? 'Agosto 2022 — Diciembre 2023' : 'August 2022 — December 2023',
+    title: lang === 'es' ? 'Desarrollador web practicante' : 'Web Developer Intern',
+    company: 'Tecnológico Nacional de México, TecNM',
+    link: 'https://mooc.tecnm.mx/',
+    date: lang === 'es' ? 'Marzo 2023 — Diciembre 2023' : 'March 2023 — December 2023',
     descriptionItems: lang === 'es' ? [
-      'Lidere un equipo de desarrollo para la creación de proyectos de emprendimiento, mi objetivo principal fue asegurar el uso de buenas prácticas, código limpio y escalabilidad.',
-      'Contribuí activamente al éxito continuo del equipo mediante la mentoría de nuevos miembros y la coordinación de tareas.',
-      'Trabajo con tecnologías como: Java, Spring, PHP, MySQL, Docker, AWS, Linux y Git.'
+      'Lideré el desarrollo de proyectos web enfocados en la educación inclusiva, priorizando buenas prácticas, accesibilidad y escalabilidad.',
+      'Diseñé plataformas enfocadas en la experiencia del usuario y estándares de accesibilidad (W3C), logrando mejoras medibles de la usabilidad de las aplicaciones.',
+      'Coordiné tareas, mentoricé a nuevos miembros e hice exposiciones sobre el funcionamiento de los proyectos desarrollando, fomentando la inclusión en el área de la tecnología.',
+      'Tecnologías utilizadas: HTML, CSS, JavaScript, React, Git y GitHub.',
     ] : [
-      'I led a development team for the creation of entrepreneurship projects, my main objective was to ensure the use of good practices, clean code and scalability.',
-      'I actively contributed to the team\'s continued success by mentoring new members and coordinating tasks.',
-      'I work with technologies such as: Java, Spring, PHP, MySQL, Docker, AWS, Linux and Git.'
+      'I led the development of web projects focused on inclusive education, prioritizing best practices, accessibility, and scalability.',
+      'I designed platforms focused on user experience and accessibility standards (W3C), achieving measurable improvements in application usability.',
+      'I coordinated tasks, mentored new members, and gave presentations on the functioning of the developed projects, promoting inclusion in the technology field.',
+      'Technologies used: HTML, CSS, JavaScript, React, Git, and GitHub.'
     ],
-    more: lang === 'es' ? [
-      'Desarrollo de servicios API REST para aplicaciones y sistemas web.',
-      'Diseño e implementación de bases de datos relacionales.',
-      'Integración de Docker para optimizar la consistencia en entornos de desarrollo y producción, mejorando la portabilidad y distribución del software.',
-      'Uso de lenguajes de programación orientada a objetos, aplicando principios y patrones de diseño.',
-      'Automatización del despliegue y la entrega de contenido mediante servicios de CI/CD.',
-      'Integración de servicios en la nube.',
-      'Uso de herramientas de control de versiones.',
-      'Administración de servidores basados en Linux.',
-      'Creación de documentación técnica para los proyectos desarrollados. ',
-    ] : [
-      'Development of REST API services for web applications and systems.',
-      'Design and implementation of relational databases.',
-      'Integration of Docker to optimize consistency in development and production environments, improving software portability and distribution.',
-      'Use of object-oriented programming languages, applying design principles and patterns.',
-      'Automation of deployment and content delivery through CI/CD services.',
-      'Integration of cloud services.',
-      'Use of version control tools.',
-      'Administration of Linux-based servers.',
-      'Creation of technical documentation for developed projects.',
-    ]
-  },
-  {
-    title: lang === 'es' ? 'Servicio Social' : 'Social Service',
-    company: 'MOOC, TecNM',
-    date: lang === 'es' ? 'Agosto 2022 — Enero 2023' : 'August 2022 — January 2023',
-    descriptionItems: lang === 'es' ? [
-      'Diseñé y desarrollé una plataforma de educación inclusiva para personas con discapacidad.',
-      'El desarrollo fue echo con un especial enfoque en la accesibilidad siguiendo los estándares de la W3C, lo que nos permitió una mejora en la usabilidad de hasta un 40% para usuarios con diferentes discapacidades.',
-      'Colaboré con un equipo interdisciplinario para integrar funcionalidades que atendieran diversas necesidades educativas.',
-      'Trabajo con tecnologías como: HTML, CSS, JavaScript, React, W3C standards, Git y GitHub.'
-    ] : [
-      'I designed and developed an inclusive education platform for people with disabilities.',
-      'The development was done with a special focus on accessibility following W3C standards, which allowed us to improve usability by up to 40% for users with different disabilities.',
-      'I collaborated with an interdisciplinary team to integrate functionalities that addressed various educational needs.',
-      'I work with technologies such as: HTML, CSS, JavaScript, React, W3C standards, Git and GitHub.'
-    ]
   },
 ]
 ---
 
-<ol class='relative mt-16'>
-  {EXPERIENCE.map((experience) => (
-    <li class=''>
-      <ExperienceItem {...experience} />
-    </li>
-  ))}
-</ol>
+<SectionContainer id='experience' class='mt-12'>
+  <h2
+    class='flex items-center mb-3 md:mb-6 text-xl md:text-3xl font-semibold gap-x-4 md:gap-x-8 text-black/80 dark:text-white'
+  >
+    <Briefcase class='size-8' />
+    Experiencia
+  </h2>
+
+  <ol class='relative mt-8'>
+    {EXPERIENCE.map((experience) => (
+      <li class=''>
+        <ExperienceItem {...experience} />
+      </li>
+    ))}
+  </ol>
+</SectionContainer>

@@ -1,11 +1,16 @@
 ---
 import { getLangFromUrl } from '@/i18n/utils'
-import ThemeToggle from './ThemeToggle.astro'
-import LanguageToggle from './LanguageToggle.astro'
+import LanguageToggle from '@/components/ui/LanguageToggle.astro'
+import ThemeToggle from '@/components/ui/ThemeToggle.astro'
 
 const lang = getLangFromUrl(Astro.url)
 
 const navItems = [
+  {
+    title: lang === 'es' ? 'Sobre mí' : 'About me',
+    label: 'about-me',
+    url: `/${lang}/#about-me`,
+  },
   {
     title: lang === 'es' ? 'Experiencia' : 'Experience',
     label: 'experience',
@@ -17,100 +22,51 @@ const navItems = [
     url: `/${lang}/#projects`,
   },
   {
-    title: lang === 'es' ? 'Sobre mí' : 'About me',
-    label: 'about-me',
-    url: `/${lang}/#about-me`,
-  },
-  {
     title: lang === 'es' ? 'Habilidades' : 'Skills',
     label: 'skills',
     url: `/${lang}/#skills`,
-  }
+  },
+  // {
+  //   title: lang === 'es' ? 'Certificaciones' : 'Certifications',
+  //   label: 'certifications',
+  //   url: `/${lang}/#certifications`,
+  // },
 ]
 ---
 
-<header
-  class='fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2'
->
-  <nav
-    class='flex px-1 md:px-3 text-xs md:text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center'
-  >
-    {navItems.map((link) => (
-      <a
-        class='relative block py-1 px-1 md:py-2 md:px-2 transition hover:text-yellow-500 dark:hover:text-purple-700'
-        aria-label={link.label}
-        href={link.url}
-      >
-        {link.title}
-      </a>
-    ))}
-    
-    <ThemeToggle />
-    <LanguageToggle />
+<header id='header-navbar' class='w-full mb-8 z-10 sticky top-2 left-0 py-1 px-2 md:py-2 md:px-4 border border-neutral-300/60 dark:border-neutral-700/60 rounded-full'>
+  <nav class='w-full flex justify-between items-center gap-3 md:gap-6'>
+    <ul class='flex flex-row justify-start items-center gap-1 md:gap-3'>
+      {navItems.map((link) => (
+        <li>
+          <a
+            class='relative block py-1 px-2 transition hover:text-yellow-500 dark:hover:text-purple-700 font-semibold text-xs md:text-sm text-neutral-800 dark:text-neutral-200'
+            aria-label={link.label}
+            href={link.url}
+          >
+            {link.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class='flex flex-row justify-end items-center gap-1 md:gap-2'>
+      <ThemeToggle />
+      <LanguageToggle />
+    </div>
   </nav>
 </header>
 
-<script>
-  document.addEventListener('astro:page-load', () => {
-    const sections = document.querySelectorAll('section')
-    const navItems = document.querySelectorAll('header nav a')
-
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            const isDark = document.documentElement.classList[0] === 'dark'
-            
-            if (item.getAttribute('aria-label') == entry.target.id) {
-              if (isDark) {
-                item.classList.add('text-purple-700')
-              } else {
-                item.classList.add('text-yellow-500')
-              }
-            } else {
-              if (isDark) {
-                item.classList.remove('text-purple-700')
-              } else {
-                item.classList.remove('text-yellow-500')
-              }
-            }
-          })
-        }
-      })
-    }
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.3,
-    })
-
-    sections.forEach((section) => {
-      observer.observe(section)
-    })
-
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === 'hidden') {
-        observer.disconnect()
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section)
-        })
-      }
-    }
-  })
-</script>
-
 <style>
-  nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
+  #header-navbar {
+    animation: enhance-header both linear;
+    animation-timeline: scroll(root);
     animation-range: 0 100px;
   }
 
-  @keyframes nav-shadown {
+  @keyframes enhance-header {
     to {
-      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+      backdrop-filter: blur(5px);
     }
   }
 </style>

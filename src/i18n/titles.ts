@@ -23,4 +23,4 @@ export const titles = {
     hackatons: 'Concursos / Hackatones',
     certifications: 'Certificaciones'
   }
-} as any
+}

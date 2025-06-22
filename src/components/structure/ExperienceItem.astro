@@ -1,0 +1,62 @@
+---
+import Link from '@/assets/icons/general/link.svg'
+import { getLangFromUrl } from '@/i18n/utils'
+
+interface Props {
+  title: string
+  company: string
+  descriptionItems: string[]
+  link?: string
+  date: string
+}
+
+const { title, company, descriptionItems, link, date } = Astro.props
+const lang = getLangFromUrl(Astro.url)
+---
+
+<div
+  class='relative ml-6 mr-3 md:mx-12 pb-6 md:pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[""]]'
+>
+  <div class='relative pb-4 md:col-span-2'>
+    <div class='sticky top-0'>
+      <span class='text-yellow-400 dark:text-sky-500 -left-[42px] absolute rounded-full text-5xl'>
+        &bull;
+      </span>
+
+      {link ? (
+        // 
+        <a
+          href={link}
+          target='_blank'
+          rel='noopener noreferrer'
+          class='no-underline'
+        >
+          <h3 class='text-xl md:text-[1.75rem] font-bold text-yellow-500 dark:text-sky-500 flex items-center gap-2'>
+            {title}
+            <Link
+              class='inline-block size-4 md:size-5'
+            />
+          </h3>
+        </a>
+      ) : (
+        <h3 class='text-xl md:text-2xl font-bold text-yellow-500 dark:text-sky-500'>
+          {title}
+        </h3>
+      )}
+
+      
+      <h4 class='font-semibold text-lg md:text-xl text-neutral-800 dark:text-white'>{company}</h4>
+      <time class='p-0 m-0 mt-2 inline-block text-xs md:text-sm font-bold text-neutral-800/80 dark:text-white/80'>{date}</time>
+    </div>
+  </div>
+
+  <div class='relative flex flex-col gap-2 pb-4 text-neutral-800 dark:text-neutral-200 md:col-span-3'>
+    <ul class='list-disc pl-6 flex flex-col gap-2'>
+      {descriptionItems.map((item) => (
+        <li class='text-pretty'>
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
