@@ -38,14 +38,12 @@ const navItems = [
   <nav class='w-full flex justify-between items-center gap-3 md:gap-6'>
     <ul class='flex flex-row justify-start items-center gap-1 md:gap-3'>
       {navItems.map((link) => (
-        <li>
+        <li class='p-0 m-0'>
           <a
-            class='relative block py-1 px-2 transition hover:text-yellow-500 dark:hover:text-purple-700 font-semibold text-xs md:text-sm text-neutral-800 dark:text-neutral-200'
+            class='relative block py-1 px-2 md:p-0 transition hover:text-yellow-500 dark:hover:text-purple-700 font-semibold text-xs md:text-sm text-neutral-800 dark:text-neutral-200'
             aria-label={link.label}
             href={link.url}
-          >
-            {link.title}
-          </a>
+          >{link.title}</a>
         </li>
       ))}
     </ul>

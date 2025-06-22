@@ -8,9 +8,11 @@ import LinkButton from '../ui/LinkButton.astro'
 import GitHub from '@/assets/icons/social/github.svg'
 import Link from '@/assets/icons/general/link.svg'
 import ArrowRight from '@/assets/icons/general/arrow-right.svg'
+import { titles } from '@/i18n/titles'
 
 const lang = getLangFromUrl(Astro.url)
 const projects = PROJECTS[lang] as Project[]
+const titlesTranslates = titles[lang]
 ---
 
 <SectionContainer id='projects' class='mt-12'>
@@ -18,70 +20,66 @@ const projects = PROJECTS[lang] as Project[]
     class='flex items-center mb-3 md:mb-6 text-xl md:text-3xl font-semibold gap-x-4 md:gap-x-8 text-black/80 dark:text-white'
   >
     <Code class='size-8' />
-    Proyectos
+    {titlesTranslates.projects}
   </h2>
 
   <div class='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
     {projects.map(({ image, title, description, tags, link, github, id }) => (
       <article
-        class='flex flex-col space-x-0 space-y-8 group p-4 border border-neutral-300/60 dark:border-neutral-700/60 bg-neutral-200/60 dark:bg-neutral-800/60 rounded-lg project-reveal'
+        class='flex flex-col justify-between space-x-0 space-y-8 group p-4 border border-neutral-300/60 dark:border-neutral-700/60 bg-neutral-200/60 dark:bg-neutral-800/60 rounded-lg project-reveal'
       >
         <div class='w-full'>
           <div class='relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded md:rounded-lg md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:hover:bg-gray-800/50'>
             <img alt={title} class='object-cover object-top md:object-center w-full h-56 sm:h-full transition duration-500 sm:aspect-video md:group-hover:scale-105' loading='lazy' decoding='async' src={image} />
           </div>
-        </div>
-
-        <div class='w-full'>
-          <h3 class='text-xl md:text-2xl text-balance text-center font-bold text-gray-800 dark:text-gray-100'>
+          
+          <h3 class='text-xl md:text-2xl mt-6 text-balance text-center font-bold text-gray-800 dark:text-gray-100'>
             {title}
           </h3>
 
-          <div class='mt-2'>
-            <ul class='flex flex-row flex-wrap justify-center items-center mb-2 gap-2'>
-              {tags.map((tag) => (
-                <li>
-                  <span
-                    class={`flex items-center gap-x-2 rounded-full backdrop-blur-md text-xs font-bold font-mono ${tag.class} py-1 px-3`}
-                  >
-                    <tag.icon class='size-4' />
-                    {tag.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <ul class='mt-3 flex flex-row flex-wrap justify-center items-center mb-2 gap-2'>
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex items-center gap-x-2 rounded-full backdrop-blur-md text-xs font-bold font-mono ${tag.class} py-1 px-3`}
+                >
+                  <tag.icon class='size-4' />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
 
-            <div class='mt-3 text-pretty text-center text-gray-700 dark:text-gray-300'>
-              {description}
-            </div>
-            
-            <footer class='w-full flex flex-row justify-between items-center gap-4 mt-3'>
-              <div class='flex items-end justify-start gap-x-2'>
-                {github && (
-                  <LinkButton href={github}>
-                    <GitHub class='size-6' />
-                    Code
-                    
-                  </LinkButton>
-                )}
-  
-                {link && (
-                  <LinkButton href={link}>
-                    <Link class='size-4' />
-                    Preview
-                  </LinkButton>
-                )}
-              </div>
-
-              <a
-                href={`/projects/${id}`}
-                class='flex items-center justify-center gap-x-1 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-yellow-500 dark:hover:text-sky-400 transition'
-              >
-                Saber más <ArrowRight />
-              </a>
-            </footer>
+          <div class='mt-3 text-pretty text-center text-gray-700 dark:text-gray-300'>
+            {description}
           </div>
         </div>
+
+        <footer class='w-full flex flex-row justify-between items-center gap-4 mt-3'>
+          <div class='flex items-end justify-start gap-x-2'>
+            {github && (
+              <LinkButton href={github}>
+                <GitHub class='size-6' />
+                Code
+                
+              </LinkButton>
+            )}
+
+            {link && (
+              <LinkButton href={link}>
+                <Link class='size-4' />
+                Preview
+              </LinkButton>
+            )}
+          </div>
+
+          <a
+            href={`/projects/${id}`}
+            class='flex items-center justify-center gap-x-1 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-yellow-500 dark:hover:text-sky-400 transition'
+          >
+            {lang === 'es' ? 'Saber más' : 'Learn more'} <ArrowRight />
+          </a>
+        </footer>
       </article>
     ))}
   </div>
