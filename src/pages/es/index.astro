@@ -1,5 +1,12 @@
 ---
+import AboutMe from '@/components/sections/AboutMe.astro'
+import Certifications from '@/components/sections/Certifications.astro'
+import Education from '@/components/sections/Education.astro'
+import Experience from '@/components/sections/Experience.astro'
+import Hero from '@/components/sections/Hero.astro'
 import Layout from '@/layouts/Layout.astro'
+import Projects from '@/components/sections/Projects.astro'
+import Skills from '@/components/sections/Skills.astro'
 ---
 
 <Layout
@@ -7,15 +14,11 @@ import Layout from '@/layouts/Layout.astro'
   description='Contrata a Cesar Villalobos Olmos para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas.'
 	imageFullUrl='https://chicho-portfolio.vercel.app/images/full-image.webp'
 >
-  <h1>
-    Hola Mundo!!!
-  </h1>
-
-  <!-- Hero Section -->
-  <!-- About me -->
-  <!-- Experience -->
-  <!-- Projects -->
-  <!-- Education -->
-  <!-- Skills -->
-  <!-- Certifications -->
+  <Hero />
+  <AboutMe />
+  <Experience />
+  <Projects />
+  <Education />
+  <Skills />
+  <Certifications />
 </Layout>
