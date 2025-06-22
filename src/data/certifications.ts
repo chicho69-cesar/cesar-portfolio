@@ -1,4 +1,14 @@
-export const CERTIFICATIONS = {
+type Certification = {
+  title: string
+  emittedBy: string
+  issueDate: string
+  expirationDate?: string
+  image: string
+}
+
+export const CERTIFICATIONS: {
+  [lang: string]: Certification[]
+} = {
   'es': [
     {
       title: 'AWS Certified Cloud Practitioner',
