@@ -1,0 +1,32 @@
+---
+import Meteors from '@/islands/Meteors'
+
+interface Props {
+  title: string
+  skills: {
+    name: string
+    icon: any
+  }[]
+}
+
+const { title, skills } = Astro.props
+---
+
+<div class='relative overflow-hidden w-full h-full p-4 bg-yellow-100 rounded-lg dark:bg-sky-900 dark:text-white/80 border border-yellow-400 dark:border-sky-500'>
+  <Meteors client:load number={50} />
+  
+  <h4 class='text-base md:text-lg font-semibold mb-4 text-neutral-800 dark:text-neutral-200'>
+    {title}
+  </h4>
+
+  <section class='w-full flex flex-row flex-wrap gap-4 items-center justify-between'>
+    {skills.map((skill) => (
+      <article class='flex flex-col items-center justify-center gap-1 p-2 rounded backdrop-blur-xl bg-yellow-50/50 dark:bg-sky-950/50 w-20 md:w-28'>
+        <skill.icon class='size-8 md:size-10' />
+        <span class='mt-1 text-xs font-bold font-mono text-center text-neutral-800 dark:text-neutral-200'>
+          {skill.name}
+        </span>
+      </article>
+    ))}
+  </section>
+</div>

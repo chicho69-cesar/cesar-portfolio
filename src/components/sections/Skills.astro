@@ -1,0 +1,58 @@
+---
+import SectionContainer from '../ui/SectionContainer.astro'
+import SkillsIcon from '@/assets/icons/general/skills.svg'
+import SkillItem from '../structure/SkillItem.astro'
+import { SKILLS } from '@/data/skills'
+import { getLangFromUrl } from '@/i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+---
+
+<SectionContainer id='skills' class='mt-12'>
+  <h2
+    class='flex items-center mb-3 md:mb-6 text-xl md:text-3xl font-semibold gap-x-4 md:gap-x-8 text-black/80 dark:text-white'
+  >
+    <SkillsIcon class='size-8' />
+    Habilidades
+  </h2>
+
+  <div class='container mx-auto'>
+    <div class='grid grid-cols-12 gap-4'>
+      <article class='col-span-12 md:col-span-8 flex flex-col'>
+        <div class='h-full flex items-center justify-center'>
+          <SkillItem
+            title={lang === 'es' ? 'Front-End y Móvil' : 'Front-End and Mobile'}
+            skills={SKILLS.frontend}
+          />
+        </div>
+      </article>
+
+      <article class='col-span-12 md:col-span-4 flex flex-col order-4 md:order-2'>
+        <div class='h-full flex items-center justify-center'>
+          <SkillItem
+            title={lang === 'es' ? 'Bases de Datos' : 'Databases'}
+            skills={SKILLS.databases}
+          />
+        </div>
+      </article>
+
+      <article class='col-span-6 flex flex-col order-3 md:order-3'>
+        <div class='h-full flex items-center justify-center'>
+          <SkillItem
+            title={lang === 'es' ? 'Desarrollo y DevOps' : 'Development and DevOps'}
+            skills={SKILLS.dev}
+          />
+        </div>
+      </article>
+
+      <article class='col-span-6 flex flex-col order-2 md:order-4'>
+        <div class='h-full flex items-center justify-center'>
+          <SkillItem
+            title='Back-End'
+            skills={SKILLS.backend}
+          />
+        </div>
+      </article>
+    </div>
+  </div>
+</SectionContainer>
