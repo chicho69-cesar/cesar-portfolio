@@ -1,0 +1,38 @@
+---
+import { getLangFromUrl } from '@/i18n/utils'
+import SectionContainer from '../ui/SectionContainer.astro'
+import Code from '@/assets/icons/general/code.svg'
+import { PROJECTS } from '@/data/projects'
+import type { Project } from '@/types/project'
+import { titles } from '@/i18n/titles'
+import ProjectItem from '../structure/ProjectItem.astro'
+import { allProjects } from '@/i18n/sections'
+
+const lang = getLangFromUrl(Astro.url)
+const titlesTranslates = titles[lang]
+const allTranslates = allProjects[lang]
+const projects: Project[] = PROJECTS[lang]
+---
+
+<SectionContainer id='projects'>
+  <h2
+    class='flex items-center mb-3 md:mb-6 text-xl md:text-3xl font-semibold gap-x-4 md:gap-x-8 text-black/80 dark:text-white'
+  >
+    <Code class='size-8' />
+    {titlesTranslates.projects}
+  </h2>
+
+  <p
+    class='text-neutral-800 dark:text-neutral-200 text-base mb-6 md:mb-8 text-pretty [&>strong]:text-yellow-500 dark:[&>strong]:text-sky-400 [&>strong]:font-normal [&>strong]:font-mono'
+  >
+    {allTranslates.paragraph} <strong>{allTranslates.highlight}</strong>
+  </p>
+
+  <div class='columns-1 md:columns-2 gap-4 md:gap-6'>
+    {projects.map((project) => (
+      <div class='inline-block mb-4 md:mb-6'>
+        <ProjectItem project={project} />
+      </div>
+    ))}
+  </div>
+</SectionContainer>

@@ -2,8 +2,8 @@
 import '@/styles/global.css';
 import '@fontsource-variable/onest';
 
-import Navbar from '@/components/ui/Navbar.astro'
 // import { ClientRouter } from 'astro:transitions'
+import ProjectNavbar from '@/components/ui/ProjectNavbar.astro';
 
 interface Props {
   title: string;
@@ -56,7 +56,7 @@ const { title, description, keywords = '', imageFullUrl = '' } = Astro.props;
     ></div>
 
     <main class='w-[95%] py-12 mx-auto container md:max-w-4xl'>
-      <Navbar />
+      <ProjectNavbar />
       
       <div class='w-full flex flex-col gap-16'>
         <slot />
