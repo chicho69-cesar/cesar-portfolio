@@ -52,3 +52,14 @@ export const certifications = {
     expirationDate: 'Expiration date: '
   },
 }
+
+export const allProjects = {
+  'es': {
+    paragraph: 'Bienvenido a este espacio donde comparto con mucho alegría algunos de los proyectos en los que he trabajado. Cada uno de estos proyectos representa una parte importante de mi en forma de ilusión, horas de trabajo, dedicación y aprendizaje. Te invito a explorarlos, descubrir sus detalles y, sobre todo, a disfrutar de ellos tanto como yo disfruté creándolos.',
+    highlight: '¡Gracias por tomarte el tiempo de conocer mi trabajo!',
+  },
+  'en': {
+    paragraph: 'Welcome to this space where I joyfully share some of the projects I have worked on. Each of these projects represents an important part of my journey, filled with enthusiasm, hours of work, dedication, and learning. I invite you to explore them, discover their details, and, above all, enjoy them as much as I enjoyed creating them.',
+    highlight: 'Thank you for taking the time to get to know my work!',
+  }
+}
