@@ -7,30 +7,10 @@ const lang = getLangFromUrl(Astro.url)
 
 const navItems = [
   {
-    title: lang === 'es' ? 'Sobre mí' : 'About me',
-    label: 'about-me',
-    url: `/${lang}/#about-me`,
-  },
-  {
-    title: lang === 'es' ? 'Experiencia' : 'Experience',
-    label: 'experience',
-    url: `/${lang}/#experience`,
-  },
-  {
-    title: lang === 'es' ? 'Proyectos' : 'Projects',
-    label: 'projects',
+    title: lang === 'es' ? 'Inicio' : 'Home',
+    label: 'home',
     url: `/${lang}/#projects`,
-  },
-  {
-    title: lang === 'es' ? 'Habilidades' : 'Skills',
-    label: 'skills',
-    url: `/${lang}/#skills`,
-  },
-  // {
-  //   title: lang === 'es' ? 'Certificaciones' : 'Certifications',
-  //   label: 'certifications',
-  //   url: `/${lang}/#certifications`,
-  // },
+  }
 ]
 ---
 

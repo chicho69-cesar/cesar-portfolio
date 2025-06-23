@@ -1,0 +1,95 @@
+---
+import { getLangFromUrl } from '@/i18n/utils'
+import type { Project } from '@/types/project'
+import LinkButton from '../ui/LinkButton.astro'
+import GitHub from '@/assets/icons/social/github.svg'
+import Link from '@/assets/icons/general/link.svg'
+import ArrowRight from '@/assets/icons/general/arrow-right.svg'
+
+interface Props {
+  project: Project
+}
+
+const { project }: Props = Astro.props
+const { image, title, description, tags, link, github, id } = project
+
+const lang = getLangFromUrl(Astro.url)
+---
+
+<article
+  class='flex flex-col justify-between space-x-0 space-y-8 group p-4 border border-neutral-300/60 dark:border-neutral-700/60 bg-neutral-200/60 dark:bg-neutral-800/60 rounded-lg project-reveal'
+>
+  <div class='w-full'>
+    <div class='relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded md:rounded-lg md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:hover:bg-gray-800/50'>
+      <img alt={title} class='object-cover object-top md:object-center w-full h-56 sm:h-full transition duration-500 sm:aspect-video md:group-hover:scale-105' loading='lazy' decoding='async' src={image} />
+    </div>
+    
+    <h3 class='text-xl md:text-2xl mt-6 text-balance text-center font-bold text-gray-800 dark:text-gray-100'>
+      {title}
+    </h3>
+
+    <ul class='mt-3 flex flex-row flex-wrap justify-center items-center mb-2 gap-2'>
+      {tags.map((tag) => (
+        <li>
+          <span
+            class={`flex items-center gap-x-2 rounded-full backdrop-blur-md text-xs font-bold font-mono ${tag.class} py-1 px-3`}
+          >
+            <tag.icon class='size-4' />
+            {tag.name}
+          </span>
+        </li>
+      ))}
+    </ul>
+
+    <div class='mt-3 text-pretty text-center text-gray-700 dark:text-gray-300'>
+      {description}
+    </div>
+  </div>
+
+  <footer class='w-full flex flex-row justify-between items-center gap-4 mt-3'>
+    <div class='flex items-center justify-start gap-x-2'>
+      {github && (
+        <LinkButton href={github}>
+          <GitHub class='size-6' />
+          Code
+        </LinkButton>
+      )}
+
+      {link && (
+        <LinkButton href={link}>
+          <Link class='size-4' />
+          Preview
+        </LinkButton>
+      )}
+    </div>
+
+    <a
+      href={`/${lang}/projects/${id}`}
+      class='flex items-center justify-center gap-x-1 text-sm font-semibold text-neutral-800 dark:text-neutral-200 hover:text-yellow-500 dark:hover:text-sky-400 transition'
+    >
+      {lang === 'es' ? 'Saber más' : 'Learn more'} <ArrowRight />
+    </a>
+  </footer>
+</article>
+
+<style>
+  .project-reveal{
+    animation: reveal both linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 25%;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      scale: 0.75;
+      translate: 0 50px;
+    }
+
+    to {
+      opacity: 1;
+      scale: 1;
+      translate: 0 0;
+    }
+  }
+</style>

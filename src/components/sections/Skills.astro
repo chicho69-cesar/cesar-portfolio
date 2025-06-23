@@ -4,8 +4,10 @@ import SkillsIcon from '@/assets/icons/general/skills.svg'
 import SkillItem from '../structure/SkillItem.astro'
 import { SKILLS } from '@/data/skills'
 import { getLangFromUrl } from '@/i18n/utils'
+import { titles } from '@/i18n/titles'
 
 const lang = getLangFromUrl(Astro.url)
+const titlesTranslates = titles[lang]
 ---
 
 <SectionContainer id='skills' class='mt-12'>
@@ -13,7 +15,7 @@ const lang = getLangFromUrl(Astro.url)
     class='flex items-center mb-3 md:mb-6 text-xl md:text-3xl font-semibold gap-x-4 md:gap-x-8 text-black/80 dark:text-white'
   >
     <SkillsIcon class='size-8' />
-    Habilidades
+    {titlesTranslates.skills}
   </h2>
 
   <div class='container mx-auto'>

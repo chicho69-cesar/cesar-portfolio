@@ -7,6 +7,11 @@ import GitHub from '@/assets/icons/social/github.svg'
 import Mail from '@/assets/icons/social/mail.svg'
 import Download from '@/assets/icons/general/download.svg'
 import { HighlightText } from '@/islands/HighlightText'
+import { getLangFromUrl } from '@/i18n/utils'
+import { hero } from '@/i18n/sections'
+
+const lang = getLangFromUrl(Astro.url)
+const heroTranslates = hero[lang]
 ---
 
 <SectionContainer id='hero' class='w-full'>
@@ -27,17 +32,17 @@ import { HighlightText } from '@/islands/HighlightText'
 
     <div class='col-span-2 w-full flex flex-col flex-nowrap items-center md:block'>
       <h3 class='text-neutral-800 dark:text-neutral-200 text-2xl md:text-4xl mb-3 dark:[&>strong]:text-sky-500 [&>strong]:text-yellow-500'>
-        Hola, soy <HighlightText className='text-4xl font-semibold' text='César Villalobos Olmos' client:only />
+        <span class='block md:inline-block mb-1 md:m-0'>{heroTranslates.greeting} </span> <HighlightText className='text-4xl font-semibold' text='César Villalobos Olmos' client:only />
       </h3>
     
       <Badge>
         <a href='https://linkedin.com/in/cesarvillalobosolmos/' target='_blank'>
-          Disponible para trabajar
+          {heroTranslates.available}
         </a>
       </Badge>
 
       <p class='w-full my-4 text-lg text-center md:text-left text-gray-800 dark:[&>strong]:text-sky-500 [&>strong]:text-yellow-500 [&>strong]:font-bold dark:text-gray-300 text-pretty'>
-				<strong>+1,5 años de experiencia.</strong> Apasionado Ingeniero de Software y desarrollador Full-Stack, especializado en crear aplicaciones web y móviles únicas que transforman la forma en que las personas interactúan con la tecnología.
+				<strong>{heroTranslates.experience}</strong> {heroTranslates.description}
 			</p>
 
       <ul class='my-2 md:my-4 w-full flex flex-row justify-center md:justify-start items-center gap-2'>
@@ -83,7 +88,7 @@ import { HighlightText } from '@/islands/HighlightText'
     
       <LinkButton href='/cv.pdf' isForDownload>
         <Download class='size-4' />
-        Descargar CV
+        {heroTranslates.download}
       </LinkButton>
     </div>
   </div>

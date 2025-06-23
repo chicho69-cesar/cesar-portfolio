@@ -1,0 +1,119 @@
+---
+import type { GetStaticPaths } from 'astro'
+import type { Project } from '@/types/project'
+import { PROJECTS } from '@/data/projects'
+import ProjectLayout from '@/layouts/ProjectLayout.astro'
+import { Swiper } from '@/islands/Swiper.tsx'
+import LinkButton from '@/components/ui/LinkButton.astro'
+import GitHub from '@/assets/icons/social/github.svg'
+import Link from '@/assets/icons/general/link.svg'
+
+export const getStaticPaths = (() => {
+  const projects: Project[] = PROJECTS['es']
+
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }))
+}) satisfies GetStaticPaths
+
+const { project } = Astro.props
+---
+
+<ProjectLayout
+	title={project.title}
+  description={project.description}
+	imageFullUrl={project.image}
+>
+  <div class='w-full'>
+    <!-- <Swiper client:only images={project.images || []} /> -->
+
+    <div class='w-full mb-8'>
+      <h1 class='text-neutral-800 dark:text-neutral-200 text-2xl md:text-4xl mb-3 dark:[&>strong]:text-sky-500 [&>strong]:text-yellow-500'>
+        {project.title}
+      </h1>
+
+      <ul class='mt-3 flex flex-row flex-wrap justify-start items-center mb-2 gap-2'>
+        {project.tags.map((tag) => (
+          <li>
+            <span
+              class={`flex items-center gap-x-2 rounded-full backdrop-blur-md text-xs font-bold font-mono ${tag.class} py-1 px-3`}
+            >
+              <tag.icon class='size-4' />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <p class='w-full my-4 text-base text-left text-gray-800 dark:[&>strong]:text-sky-500 [&>strong]:text-yellow-500 [&>strong]:font-bold dark:text-gray-300 text-pretty'>
+				{project.description}
+			</p>
+
+      <div class='flex flex-row flex-wrap items-center justify-start gap-2'>
+        {(project.github && project.multiple_repos.length === 0) && (
+          <LinkButton href={project.github}>
+            <GitHub class='size-6' />
+            Code
+          </LinkButton>
+        )}
+
+        {project.link && (
+          <LinkButton href={project.link}>
+            <Link class='size-4' />
+            Preview
+          </LinkButton>
+        )}
+
+        {project.multiple_repos.length > 0 && (
+          project.multiple_repos.map((repo) => (
+            <LinkButton href={repo.link}>
+              <GitHub class='size-6' />
+              {repo.name}
+            </LinkButton>
+          ))
+        )}
+      </div>
+    </div>
+
+    <h3 class='text-neutral-800 dark:text-neutral-200 text-xl md:text-2xl mb-3'>
+      Screenshots
+    </h3>
+
+    <Swiper client:only images={project.images || []} />
+
+    <h3 class='text-neutral-800 dark:text-neutral-200 text-xl md:text-2xl mb-3 mt-8'>
+      Más información
+    </h3>
+
+    <div class='p-4 my-4 flex flex-col gap-4 rounded-lg bg-neutral-200/80 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700'>
+      {project.full_description.split('<br/>').map((desc) => (
+        <p
+          class='w-full text-base text-left text-pretty text-neutral-800 dark:text-neutral-200'
+        >
+          {desc}
+        </p>
+      ))}
+    </div>
+  </div>
+</ProjectLayout>
+
+<style is:global>
+  .my-scroll::-webkit-scrollbar {
+    width: 3.5px;
+    height: 3.5px;
+  }
+  
+  .my-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .my-scroll::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background: #6669;
+  }
+
+  .my-scroll::-webkit-scrollbar-thumb:hover {
+    background: #6663;
+  }
+</style>

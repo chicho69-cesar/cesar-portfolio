@@ -3,6 +3,7 @@ import { getLangFromUrl } from '@/i18n/utils'
 import SectionContainer from '../ui/SectionContainer.astro'
 import School from '@/assets/icons/general/school.svg'
 import Check from '@/assets/icons/general/check.svg'
+import { titles } from '@/i18n/titles'
 
 const lang = getLangFromUrl(Astro.url)
 
@@ -18,6 +19,8 @@ const EXPERIENCE = [
     date: lang === 'es' ? 'Agosto 2017 — Julio 2020' : 'August 2017 — July 2020',
   },
 ]
+
+const titlesTranslates = titles[lang]
 ---
 
 <SectionContainer id='education' class='mt-12'>
@@ -25,7 +28,7 @@ const EXPERIENCE = [
     class='flex items-center mb-3 md:mb-6 text-xl md:text-3xl font-semibold gap-x-4 md:gap-x-8 text-black/80 dark:text-white'
   >
     <School class='size-8' />
-    Educación
+    {titlesTranslates.education}
   </h2>
 
   <ol class='relative mt-8'>

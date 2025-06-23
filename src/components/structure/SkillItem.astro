@@ -13,7 +13,7 @@ const { title, skills } = Astro.props
 ---
 
 <div class='relative overflow-hidden w-full h-full p-4 bg-yellow-100 rounded-lg dark:bg-sky-900 dark:text-white/80 border border-yellow-400 dark:border-sky-500'>
-  <Meteors client:load number={50} />
+  <Meteors client:only number={50} />
   
   <h4 class='text-base md:text-lg font-semibold mb-4 text-neutral-800 dark:text-neutral-200'>
     {title}

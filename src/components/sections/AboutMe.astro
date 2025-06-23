@@ -1,6 +1,13 @@
 ---
+import { getLangFromUrl } from '@/i18n/utils'
 import SectionContainer from '../ui/SectionContainer.astro'
 import ProfileCheck from '@/assets/icons/general/profile-check.svg'
+import { titles } from '@/i18n/titles'
+import { aboutMe } from '@/i18n/sections'
+
+const lang = getLangFromUrl(Astro.url)
+const titlesTranslates = titles[lang]
+const aboutMeTranslates = aboutMe[lang]
 ---
 
 <SectionContainer id='about-me' class='mt-12'>
@@ -8,24 +15,20 @@ import ProfileCheck from '@/assets/icons/general/profile-check.svg'
     class='flex items-center mb-3 md:mb-6 text-xl md:text-3xl font-semibold gap-x-4 md:gap-x-8 text-black/80 dark:text-white'
   >
     <ProfileCheck class='size-8' />
-    Sobre mí
+    {titlesTranslates.aboutMe}
   </h2>
 
   <div class='[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-sky-400 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty [&>p]:text-lg [&>p]:text-neutral-800 dark:[&>p]:text-neutral-200'>
     <p>
-      <!-- {aboutMe[lang].paragraph1} <strong>{aboutMe[lang].paragraph1Highlight1}</strong>. -->
-      ¡Hola! Soy Cesar Villalobos Olmos, aunque mis amigos me llaman Chicho. Soy un apasionado desarrollador Full-Stack e ingeniero en TIC's. Mi curiosidad y afición por los videojuegos me llevaron a descubrir el mundo de la programación, y hoy en día <strong>trabajo en el desarrollo por pasión y amor a la tecnología.</strong>
+      {aboutMeTranslates.paragraph1} <strong>{aboutMeTranslates.paragraph1Highlight1}</strong>
     </p>
 
     <p>
-      <!-- {aboutMe[lang].paragraph2Sec1} <strong>{aboutMe[lang].paragraph2Highlight1}</strong>, {aboutMe[lang].paragraph2Sec2} -->
-      Gracias a la programación he tenido la oportunidad de <strong>vivir experiencias increíbles, conocer personas maravillosas y estar lugares únicos,</strong> he trabajado en proyectos como freelance, con equipos en entornos empresariales y he tenido la oportunidad de competir en diversos concursos y hackatones que me han ayudado a llegar hasta donde estoy hoy.
+      {aboutMeTranslates.paragraph2Sec1} <strong>{aboutMeTranslates.paragraph2Highlight1}</strong> {aboutMeTranslates.paragraph2Sec2}
     </p>
 
     <p>
-      <!-- <strong>{aboutMe[lang].paragraph3Highlight1}</strong>, {aboutMe[lang].paragraph3Sec1} -->
-      <!-- <strong>{aboutMe[lang].paragraph3Highlight2}</strong>, {aboutMe[lang].paragraph3Sec2} -->
-      <strong>Me encanta compartir conocimientos y aprender de otros,</strong> siempre he creído firmemente que el trabajo en equipo es la clave del éxito. Si estás buscando a alguien con <strong>pasión, creatividad y mucha energía,</strong> me encantaría conectar contigo y ver cómo puedo contribuir a tu próximo proyecto.
+      <strong>{aboutMeTranslates.paragraph3Highlight1}</strong> {aboutMeTranslates.paragraph3Sec1} <strong>{aboutMeTranslates.paragraph3Highlight2}</strong> {aboutMeTranslates.paragraph3Sec2}
     </p>
   </div>
 </SectionContainer>

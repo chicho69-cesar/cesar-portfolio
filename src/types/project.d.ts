@@ -1,3 +1,8 @@
+type Repo = {
+  name: string
+  link: string
+}
+
 export interface Project {
   id: string
   title: string
@@ -6,4 +11,7 @@ export interface Project {
   github: string
   image: string
   tags: any[]
+  images: string[]
+  multiple_repos: Repo[]
+  full_description: string
 }
