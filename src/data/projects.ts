@@ -38,6 +38,24 @@ export const PROJECTS = {
       multiple_repos: [],
       full_description: 'Expense Tracker es una aplicación que desarrolle para mi uso personal, ya que me ayuda mucho a llevar el control de los gastos que tengo, además de que me permite ver en detalle como es que gasto mi dinero, y así poder ahorrar más. <br/>Esta aplicación está construida con React y JavaScript, utilicé React porque es la librería de Front-End que más me gusta y con la que más experiencia desarrollando tengo, me encanta su forma de trabajar basada en componentes, hooks y la enorme cantidad de herramientas y librerías que existen para mejorar la experiencia de desarrollo. Para el almacenamiento de la información utilicé Firebase, ya que es una herramienta muy completa y fácil de usar, además de que me permite escalar la aplicación sin problemas, también hice uso de Firebase para la autenticación de usuarios, lo que me permite tener un control de los gastos por usuario. Para el diseño emplee Tailwind CSS, ya que es una herramienta que me encanta y me permite crear diseños de manera rápida y sencilla. <br/>Esta aplicación me encanta no solo porque la construí yo mismo, sino que me es sumamente útil en mi día a día para controlar mis finanzas personales.',
     },
+    {
+      id: 'ink-chat',
+      title: 'INK Chat - Aplicación de chat en tiempo real',
+      description: '',
+      link: 'https://github.com/chicho69-cesar/ink-chat',
+      image: '/projects/ink-chat.webp',
+      github: 'https://github.com/chicho69-cesar/ink-chat',
+      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODEJS, TAGS.POSTGRESQL],
+      images: [
+        '/projects/ink-chat/1.webp',
+        '/projects/ink-chat/2.webp',
+        '/projects/ink-chat/3.webp',
+        '/projects/ink-chat/4.webp',
+        '/projects/ink-chat/5.webp',
+      ],
+      multiple_repos: [],
+      full_description: '',
+    },
   ],
   'en': [
     {
@@ -75,6 +93,24 @@ export const PROJECTS = {
       ],
       multiple_repos: [],
       full_description: 'Expense Tracker is an application I developed for personal use, as it helps me keep track of my expenses, allowing me to see in detail how I spend my money and save more. <br/>This application is built with React and JavaScript, which I chose because it is my favorite front-end library and the one I have the most experience with. I love its component-based architecture, hooks, and the vast array of tools and libraries available to enhance the development experience. For data storage, I used Firebase, as it is a comprehensive and easy-to-use tool that allows me to scale the application without issues. I also utilized Firebase for user authentication, enabling expense tracking per user. For design, I employed Tailwind CSS, a tool I adore for its ability to create designs quickly and easily. <br/>I love this application not only because I built it myself but also because it is extremely useful in my daily life for managing my personal finances.',
+    },
+    {
+      id: 'ink-chat',
+      title: 'INK Chat - Real-time Chat Application',
+      description: '',
+      link: 'https://github.com/chicho69-cesar/ink-chat',
+      image: '/projects/ink-chat.webp',
+      github: 'https://github.com/chicho69-cesar/ink-chat',
+      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODEJS, TAGS.POSTGRESQL],
+      images: [
+        '/projects/ink-chat/1.webp',
+        '/projects/ink-chat/2.webp',
+        '/projects/ink-chat/3.webp',
+        '/projects/ink-chat/4.webp',
+        '/projects/ink-chat/5.webp',
+      ],
+      multiple_repos: [],
+      full_description: '',
     },
   ]
 }
