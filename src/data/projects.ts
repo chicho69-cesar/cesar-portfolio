@@ -41,7 +41,7 @@ export const PROJECTS = {
     {
       id: 'ink-chat',
       title: 'INK Chat - Aplicación de chat en tiempo real',
-      description: '',
+      description: 'Ink Chat es una aplicación de chat en tiempo real, donde los usuarios pueden mandar mensajes a otras personas, ver sus mensajes, mantener un historial de mensajes, y ver los usuarios que están en línea.',
       link: 'https://github.com/chicho69-cesar/ink-chat',
       image: '/projects/ink-chat.webp',
       github: 'https://github.com/chicho69-cesar/ink-chat',
@@ -54,7 +54,7 @@ export const PROJECTS = {
         '/projects/ink-chat/5.webp',
       ],
       multiple_repos: [],
-      full_description: '',
+      full_description: 'Ink Chat es una aplicación de chat en tiempo real, la cual la cree utilizando un Stack de tecnologías, que incluyen a React como librería de Front-End, Express y NodeJS para crear el Back-End del proyecto, y PostgreSQL como base de datos para almacenar los mensajes y la información de los usuarios, además de que tanto para el Front-End como para el Back-End utilice el lenguaje de programación TypeScript, lo que me permite tener un tipado de datos más fuerte y asi evitar errores desde la etapa de desarrollo. <br/>Lo más importante de la aplicación es las librerías y herramientas que utilice para construirla, en el Front-End hice uso de la librería de UI Shadcn, la cual es una librería de componentes UI sumamente popular y utilizada para crear sitios web modernos y atractivos, para la comunicación en tiempo real utilice Socket.IO, una librería que permite la comunicación en tiempo real entre el cliente y el servidor usando WebSockets. <br/>En el Back-End utilice Express, un framework de Node.js que facilita la creación de aplicaciones web y APIs, y PostgreSQL como base de datos relacional para almacenar los mensajes y la información de los usuarios. <br/>Me encanto el proceso de desarrollo de esta aplicación, ya que me ayudo a aprender mucho sobre el uso de tecnologías como los WebSockets para la comunicación en tiempo real, y sus aplicaciones comunes en las aplicaciones web.',
     },
   ],
   'en': [
@@ -97,7 +97,7 @@ export const PROJECTS = {
     {
       id: 'ink-chat',
       title: 'INK Chat - Real-time Chat Application',
-      description: '',
+      description: 'Ink Chat is a real-time chat application where users can send messages to others, view their messages, maintain a message history, and see which users are online.',
       link: 'https://github.com/chicho69-cesar/ink-chat',
       image: '/projects/ink-chat.webp',
       github: 'https://github.com/chicho69-cesar/ink-chat',
@@ -110,7 +110,7 @@ export const PROJECTS = {
         '/projects/ink-chat/5.webp',
       ],
       multiple_repos: [],
-      full_description: '',
+      full_description: 'Ink Chat is a real-time chat application that I created using a technology stack that includes React for the front-end, Express and Node.js for the back-end, and PostgreSQL as the database to store messages and user information. I also used TypeScript for both the front-end and back-end, which allows for stronger data typing and helps avoid errors during development. <br/>The most important aspects of the application are the libraries and tools I used to build it. On the front-end, I utilized Shadcn UI, a popular UI component library used to create modern and attractive websites. For real-time communication, I employed Socket.IO, a library that enables real-time communication between the client and server using WebSockets. <br/>On the back-end, I used Express, a Node.js framework that simplifies the creation of web applications and APIs, and PostgreSQL as a relational database to store messages and user information. <br/>I loved the development process of this application as it helped me learn a lot about using technologies like WebSockets for real-time communication and their common applications in web applications.',
     },
   ]
 }
