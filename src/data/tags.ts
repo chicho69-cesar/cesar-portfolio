@@ -1,33 +1,35 @@
-import HTML from '@/assets/icons/tech/frontend/html.svg'
-import CSS from '@/assets/icons/tech/frontend/css.svg'
-import JavaScript from '@/assets/icons/tech/frontend/javascript.svg'
-import TypeScript from '@/assets/icons/tech/frontend/typescript.svg'
-import React from '@/assets/icons/tech/frontend/react.svg'
 import Angular from '@/assets/icons/tech/frontend/angular.svg'
-import NextJS from '@/assets/icons/tech/frontend/nextjs.svg'
 import Astro from '@/assets/icons/tech/frontend/astro.svg'
-import TailwindCSS from '@/assets/icons/tech/frontend/tailwindcss.svg'
+import AWS from '@/assets/icons/tech/dev/aws.svg'
 import Bootstrap from '@/assets/icons/tech/frontend/bootstrap.svg'
-import Figma from '@/assets/icons/tech/frontend/figma.svg'
-import Expo from '@/assets/icons/tech/frontend/expo.svg'
-import Python from '@/assets/icons/tech/backend/python.svg'
+import CSS from '@/assets/icons/tech/frontend/css.svg'
 import Django from '@/assets/icons/tech/backend/django.svg'
-import NodeJS from '@/assets/icons/tech/backend/nodejs.svg'
+import Docker from '@/assets/icons/tech/dev/docker.svg'
+import Expo from '@/assets/icons/tech/frontend/expo.svg'
 import Express from '@/assets/icons/tech/backend/expressjs.svg'
-import Nest from '@/assets/icons/tech/backend/nestjs.svg'
-import Java from '@/assets/icons/tech/backend/java.svg'
-import MySQL from '@/assets/icons/tech/databases/mysql.svg'
-import SQLServer from '@/assets/icons/tech/databases/sql-server.svg'
-import PostgreSQL from '@/assets/icons/tech/databases/postgresql.svg'
-import MongoDB from '@/assets/icons/tech/databases/mongodb.svg'
-import SQLite from '@/assets/icons/tech/databases/sqlite.svg'
+import Figma from '@/assets/icons/tech/frontend/figma.svg'
 import Firebase from '@/assets/icons/tech/databases/firebase.svg'
+import Flutter from '@/assets/icons/tech/frontend/flutter.svg'
 import Git from '@/assets/icons/tech/dev/git.svg'
 import GitHub from '@/assets/icons/tech/dev/github.svg'
-import Docker from '@/assets/icons/tech/dev/docker.svg'
-import AWS from '@/assets/icons/tech/dev/aws.svg'
 import GitHubActions from '@/assets/icons/tech/dev/github-actions.svg'
+import HTML from '@/assets/icons/tech/frontend/html.svg'
+import Java from '@/assets/icons/tech/backend/java.svg'
+import JavaScript from '@/assets/icons/tech/frontend/javascript.svg'
 import Linux from '@/assets/icons/tech/dev/linux.svg'
+import MongoDB from '@/assets/icons/tech/databases/mongodb.svg'
+import MySQL from '@/assets/icons/tech/databases/mysql.svg'
+import Nest from '@/assets/icons/tech/backend/nestjs.svg'
+import NextJS from '@/assets/icons/tech/frontend/nextjs.svg'
+import NodeJS from '@/assets/icons/tech/backend/nodejs.svg'
+import PostgreSQL from '@/assets/icons/tech/databases/postgresql.svg'
+import Python from '@/assets/icons/tech/backend/python.svg'
+import React from '@/assets/icons/tech/frontend/react.svg'
+import SQLite from '@/assets/icons/tech/databases/sqlite.svg'
+import SQLServer from '@/assets/icons/tech/databases/sql-server.svg'
+import Supabase from '@/assets/icons/tech/databases/supabase.svg'
+import TailwindCSS from '@/assets/icons/tech/frontend/tailwindcss.svg'
+import TypeScript from '@/assets/icons/tech/frontend/typescript.svg'
 
 export const TAGS = {
   ASTRO: {
@@ -122,17 +124,17 @@ export const TAGS = {
   },
   NEST: {
     name: 'Nest.js',
-    class: 'bg-[#E0234E] text-white',
+    class: 'bg-[#E0234E99] text-white',
     icon: Nest,
   },
   NODEJS: {
     name: 'Node.js',
-    class: 'bg-[#339933] text-white',
+    class: 'bg-[#33993399] text-white',
     icon: NodeJS,
   },
   SQLSERVER: {
     name: 'SQL Server',
-    class: 'bg-[#CC2927] text-white',
+    class: 'bg-[#CC292799] text-white',
     icon: SQLServer,
   },
   POSTGRESQL: {
@@ -142,22 +144,22 @@ export const TAGS = {
   },
   SQLITE: {
     name: 'SQLite',
-    class: 'bg-[#003B57] text-white',
+    class: 'bg-[#003B5799] text-white', 
     icon: SQLite,
   },
   BOOTSTRAP: {
     name: 'Bootstrap',
-    class: 'bg-[#563d7c] text-white',
+    class: 'bg-[#563d7c99] text-white',
     icon: Bootstrap,
   },
   FIGMA: {
     name: 'Figma',
-    class: 'bg-[#F24E1E] text-white',
+    class: 'bg-[#F24E1E99] text-white',
     icon: Figma,
   },
   DJANGO: {
     name: 'Django',
-    class: 'bg-[#092E20] text-white',
+    class: 'bg-[#092E2099] text-white',
     icon: Django,
   },
   EXPO: {
@@ -167,12 +169,12 @@ export const TAGS = {
   },
   LINUX: {
     name: 'Linux',
-    class: 'bg-[#FCC624] text-black',
+    class: 'bg-[#FCC62499] text-black',
     icon: Linux,
   },
   GITHUBACTIONS: {
     name: 'GitHub Actions',
-    class: 'bg-[#2088FF] text-white',
+    class: 'bg-[#2088FF99] text-white',
     icon: GitHubActions,
   },
   JAVA: {
@@ -180,9 +182,14 @@ export const TAGS = {
     class: 'bg-[#007396] text-white',
     icon: Java,
   },
-  // FLUTTER: {
-  //   name: 'Flutter',
-  //   class: 'bg-[#02569B] text-white',
-  //   icon: '/tech/frontend/flutter.svg'
-  // },
+  FLUTTER: {
+    name: 'Flutter',
+    class: 'bg-[#02569B99] text-white',
+    icon: Flutter,
+  },
+  SUPABASE: {
+    name: 'Supabase',
+    class: 'bg-[#3ECF8E99] text-black',
+    icon: Supabase,
+  },
 }

@@ -26,8 +26,8 @@ export function Swiper({ images }: SwiperProps) {
   }, [])
 
   return (
-    <div className='grid grid-cols-4 gap-4'>
-      <div className='flex flex-row lg:flex-col items-center col-span-4 lg:col-span-1'>
+    <div className='grid grid-cols-5 gap-4'>
+      <div className='flex flex-row lg:flex-col items-center col-span-5 lg:col-span-1'>
         <div
           ref={scrollContainerRef}
           className='p-2 flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-y-auto no-scrollbar border border-neutral-300/60 dark:border-neutral-700/60 bg-neutral-200/80 dark:bg-neutral-800/80 rounded my-scroll'
@@ -47,7 +47,7 @@ export function Swiper({ images }: SwiperProps) {
         </div>
       </div>
 
-      <div className='col-span-4 lg:col-span-3'>
+      <div className='col-span-5 lg:col-span-4'>
         <img
           src={selectedImage}
           alt='Imagen principal'
