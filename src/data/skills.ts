@@ -13,9 +13,10 @@ import Expo from '@/assets/icons/tech/frontend/expo.svg'
 import Python from '@/assets/icons/tech/backend/python.svg'
 import Django from '@/assets/icons/tech/backend/django.svg'
 import NodeJS from '@/assets/icons/tech/backend/nodejs.svg'
-import Express from '@/assets/icons/tech/backend/expressjs.svg'
+// import Express from '@/assets/icons/tech/backend/expressjs.svg'
 import Nest from '@/assets/icons/tech/backend/nestjs.svg'
 import Java from '@/assets/icons/tech/backend/java.svg'
+import DotNet from '@/assets/icons/tech/backend/dotnet.svg'
 import MySQL from '@/assets/icons/tech/databases/mysql.svg'
 import SQLServer from '@/assets/icons/tech/databases/sql-server.svg'
 import PostgreSQL from '@/assets/icons/tech/databases/postgresql.svg'
@@ -93,10 +94,10 @@ export const SKILLS = {
       name: 'NodeJS',
       icon: NodeJS
     },
-    {
-      name: 'Express',
-      icon: Express
-    },
+    // {
+    //   name: 'Express',
+    //   icon: Express
+    // },
     {
       name: 'Nest',
       icon: Nest
@@ -113,10 +114,10 @@ export const SKILLS = {
     //   name: 'PHP',
     //   icon: '/tech/backend/php.svg'
     // },
-    // {
-    //   name: 'ASP.NET',
-    //   icon: '/tech/backend/dotnet.svg'
-    // },
+    {
+      name: '.NET',
+      icon: DotNet
+    },
     // {
     //   name: 'Spring',
     //   icon: '/tech/backend/spring.svg'
