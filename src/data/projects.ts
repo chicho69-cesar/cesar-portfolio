@@ -224,6 +224,7 @@ export const PROJECTS = {
           link: 'https://github.com/chicho69-cesar/emocean-backend'
         }
       ],
+      demo_video: 'aDF77nrGeDo',
       full_description: 'Emocean es una aplicación móvil que desarrollé con el objetivo de ayudar a las personas a cuidar su salud mental, ya que es un tema muy importante y que muchas veces no se le da la importancia que merece. La aplicación permite a los usuarios desahogar sus problemas de ansiedad, depresión, tristeza y otros problemas relacionados con la salud mental, además de contar con un asistente inteligente que brinda feedback y sugerencias para mejorar su estado emocional. <br/>La aplicación está desarrollada utilizando React Native y Expo, lo que me permite crear aplicaciones móviles de manera rápida y sencilla, además de que utilicé JavaScript como lenguaje de programación. Para el Back-End utilicé Node.js y Express para crear una API RESTful que permita a la aplicación móvil comunicarse con el servidor, además de que utilice OpenAI para implementar un asistente inteligente que brinda feedback y sugerencias a los usuarios. <br/>Este proyecto es muy importante para mí ya que me gracias a el puedo emplear mis conocimientos para ayudar a las personas con un tema de tanta importancia como lo es el cuidado de la salud mental.',
     },
     {
@@ -481,6 +482,7 @@ export const PROJECTS = {
           link: 'https://github.com/chicho69-cesar/emocean-backend'
         }
       ],
+      demo_video: 'aDF77nrGeDo',
       full_description: 'Emocean is a mobile application I developed to help people care for their mental health, a topic of great importance that is often overlooked. The application allows users to express their issues with anxiety, depression, sadness, and other mental health concerns, and includes an intelligent assistant that provides feedback and suggestions to improve their emotional state. <br/>The application is built using React Native and Expo with JavaScript, enabling rapid and straightforward mobile app development. For the back-end, I used Node.js and Express to create a RESTful API that connects the mobile app to the server, and OpenAI to implement an intelligent assistant that offers feedback and suggestions. <br/>This project is very meaningful to me because it allows me to apply my knowledge to help people with the critical issue of mental health care.'
     },
     {

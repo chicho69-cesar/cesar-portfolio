@@ -1,5 +1,7 @@
 ---
 import type { GetStaticPaths } from 'astro'
+import { YouTube } from 'astro-embed'
+
 import type { Project } from '@/types/project'
 import { PROJECTS } from '@/data/projects'
 import ProjectLayout from '@/layouts/ProjectLayout.astro'
@@ -26,8 +28,6 @@ const { project } = Astro.props
 	imageFullUrl={project.image}
 >
   <div class='w-full'>
-    <!-- <Swiper client:only images={project.images || []} /> -->
-
     <div class='w-full mb-8'>
       <h1 class='text-neutral-800 dark:text-neutral-200 text-2xl md:text-4xl mb-3 dark:[&>strong]:text-sky-500 [&>strong]:text-yellow-500'>
         {project.title}
@@ -76,7 +76,22 @@ const { project } = Astro.props
       </div>
     </div>
 
-    <h3 class='text-neutral-800 dark:text-neutral-200 text-xl md:text-2xl mb-3'>
+    {project.demo_video && (
+      <h3 class='text-neutral-800 dark:text-neutral-200 text-xl md:text-2xl mb-3'>
+        Demo
+      </h3>
+
+      <div class='w-full grid grid-cols-1'>
+        <YouTube
+          id={project.demo_video}
+          title={`Demo de ${project.title}`}
+          class='w-full max-w-full lite-youtube'
+          posterQuality='max'
+        />
+      </div>
+    )}
+
+    <h3 class='text-neutral-800 dark:text-neutral-200 text-xl md:text-2xl mb-3 mt-8'>
       Screenshots
     </h3>
 
@@ -115,5 +130,10 @@ const { project } = Astro.props
 
   .my-scroll::-webkit-scrollbar-thumb:hover {
     background: #6663;
+  }
+
+  .lite-youtube {
+    width: 100%;
+    max-width: 100% !important;
   }
 </style>

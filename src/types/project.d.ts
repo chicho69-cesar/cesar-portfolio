@@ -14,4 +14,5 @@ export interface Project {
   images: string[]
   multiple_repos: Repo[]
   full_description: string
+  demo_video?: string
 }
