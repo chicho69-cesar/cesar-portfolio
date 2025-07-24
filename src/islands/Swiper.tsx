@@ -8,6 +8,7 @@ export function Swiper({ images }: SwiperProps) {
   const [selectedImage, setSelectedImage] = useState(images[0] || '')
   const [imageHeight, setImageHeight] = useState<number | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 0
 
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const previewImageRef = useRef<HTMLImageElement>(null)
@@ -45,7 +46,9 @@ export function Swiper({ images }: SwiperProps) {
         <div
           ref={scrollContainerRef}
           className='p-2 flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-y-auto no-scrollbar border border-neutral-300/60 dark:border-neutral-700/60 bg-neutral-200/80 dark:bg-neutral-800/80 rounded my-scroll'
-          style={{ height: imageHeight ?? 'auto' }}
+          style={{
+            height: windowWidth < 768 ? 'auto' : `${imageHeight || '100%'}px`,
+          }}
         >
           {images.map((image, index) => (
             <img

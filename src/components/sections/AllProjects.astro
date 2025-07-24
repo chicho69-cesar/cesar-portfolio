@@ -28,11 +28,9 @@ const projects: Project[] = PROJECTS[lang]
     {allTranslates.paragraph} <strong>{allTranslates.highlight}</strong>
   </p>
 
-  <div class='columns-1 md:columns-2 gap-4 md:gap-6'>
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
     {projects.map((project) => (
-      <div class='inline-block mb-4 md:mb-6'>
-        <ProjectItem project={project} />
-      </div>
+      <ProjectItem project={project} />
     ))}
   </div>
 </SectionContainer>

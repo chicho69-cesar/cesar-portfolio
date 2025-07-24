@@ -21,15 +21,13 @@ const projects: Project[] = PROJECTS[lang]
     {titlesTranslates.projects}
   </h2>
 
-  <div class='columns-1 md:columns-2 gap-4 md:gap-6'>
-    {projects.slice(0, 6).map((project) => (
-      <div class='inline-block mb-4 md:mb-6'>
-        <ProjectItem project={project} />
-      </div>
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
+    {projects.slice(0, 10).map((project) => (
+      <ProjectItem project={project} />
     ))}
   </div>
 
-  {projects.length > 6 && (
+  {projects.length > 10 && (
     <div class='mt-12 flex items-center justify-center'>
       <a
         href={`/${lang}/projects`}

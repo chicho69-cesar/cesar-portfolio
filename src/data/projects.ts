@@ -27,24 +27,6 @@ export const PROJECTS = {
       full_description: 'Esta aplicación web la desarrolle como un proyecto de la carrera de Ingeniería en Tecnologías de la Información y Comunicaciones en la materia de Big Data Analytics, esta aplicación usa un conjunto de tecnologías especializadas para el análisis de datos y la creación de modelos de Machine Learning, estas herramientas incluyen en lenguaje de programación Python y algunas librerías indispensables como Scikit-learn, Pandas, NumPy y Matplotlib. <br/>Una vez construidos los modelos de Machine Learning, estos fueron entrenados utilizando conjuntos de datos almacenados en una base de datos no relacional MongoDB, además de que cree una API RESTful utilizando Flask, para poder comunicar la aplicación Front-End con los modelos de Machine Learning, posteriormente Dockerize la aplicación para realizar el despliegue del servidor en una instancia EC2 de AWS. <br/>Con el servidor listo para escuchar peticiones HTTP en producción y realizar las predicciones, lo siguiente fue desarrollar el Front-End del sitio web, para lo cual hice uso del framework de React Next.js el cual me permitió crear rápidamente una aplicación web escalable y lista para producción, todo este conjunto de herramientas y tecnologías me permitieron crear una aplicación web que puede predecir enfermedades como la diabetes, hipertensión y enfermedades cardiovasculares, utilizando modelos de Machine Learning entrenados con datos reales. <br/>Este proyecto me permitió aprender mucho sobre el uso de tecnologías de Machine Learning y su aplicación en la vida real, desde técnicas para la recolección y selección de datos, hasta la creación de modelos de Machine Learning y su implementación en una aplicación web.',
     },
     {
-      id: 'expense-tracker',
-      title: 'ExpenseTracker - Aplicación web para controlar tus gastos',
-      description: 'ExpenseTracker es una aplicación web para controlar tus gastos, donde puedes agregar, eliminar y editar tus gastos, además de ver el total de tus gastos, filtrarlos por categorías, y observar el balance de tus ingresos y egresos.',
-      link: 'https://react-apps-221cd.web.app/',
-      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/expense-tracker_u0yp05.webp',
-      github: 'https://github.com/chicho69-cesar/expense-tracker',
-      tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.FIREBASE],
-      images: [
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/1_cshoga.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/2_o33h0r.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/3_sbo8qf.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/4_ff8q6r.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988146/portfolio/expense-tracker/5_z0lmwe.webp',
-      ],
-      multiple_repos: [],
-      full_description: 'Expense Tracker es una aplicación que desarrolle para mi uso personal, ya que me ayuda mucho a llevar el control de los gastos que tengo, además de que me permite ver en detalle como es que gasto mi dinero, y así poder ahorrar más. <br/>Esta aplicación está construida con React y JavaScript, utilicé React porque es la librería de Front-End que más me gusta y con la que más experiencia desarrollando tengo, me encanta su forma de trabajar basada en componentes, hooks y la enorme cantidad de herramientas y librerías que existen para mejorar la experiencia de desarrollo. Para el almacenamiento de la información utilicé Firebase, ya que es una herramienta muy completa y fácil de usar, además de que me permite escalar la aplicación sin problemas, también hice uso de Firebase para la autenticación de usuarios, lo que me permite tener un control de los gastos por usuario, también cabe mencionar que utilice Firebase para poder acelerar el proceso de desarrollo muchísimo. Para el diseño emplee Tailwind CSS, ya que es una herramienta que me encanta y me permite crear diseños de manera rápida y sencilla. <br/>Esta aplicación me encanta no solo porque la construí yo mismo, sino que me es sumamente útil en mi día a día para controlar mis finanzas personales.',
-    },
-    {
       id: 'artisan-market',
       title: 'Artisan Market - E-commerce de productos artesanales',
       description: 'Artisan Market es una plataforma de comercio electrónico que se centra en la venta de productos artesanales y hechos a mano. La aplicación móvil y la versión web permitirán a los artesanos y diseñadores independientes vender sus productos únicos directamente a los consumidores.',
@@ -112,6 +94,24 @@ export const PROJECTS = {
       full_description: 'Interstellar Code es un blog de desarrollo de software que creé para compartir mis conocimientos sobre programación y desarrollo de software. Este blog está construido con el framework web Astro, utilice este framework por su increíble simplicidad y experiencia de desarrollo, además de que es un Framework que me encanta, puedes aprenderlo muy fácilmente y te permite integrar muchísimas herramientas de una forma muy sencilla, por la parte de los estilos utilicé Tailwind CSS para avanzar rápidamente en el diseño y la maquetación del sitio web. Durante el desarrollo de este blog pude aprender mucho sobre Astro ya que hice uso de muchas de sus características, como la generación de rutas dinámicas, el uso de componentes y la integración con Markdown con \'content collections\' para los artículos. Además, implementé secciones de categorías, paginación y enrutamiento dinámico. También utilicé TypeScript para asegurarme de que el código fuera más robusto y fácil de mantener. <br/>En general, este proyecto me ayudó a profundizar en mis habilidades de desarrollo web y a crear un sitio que espero sea útil para otros desarrolladores. <br/>Personalmente me encanto el proceso de desarrollo de este blog ya que me permitió explorar nuevas tecnologías y mejorar mis habilidades de programación, además de que me permite compartir mis conocimientos con personas que están interesadas en aprender más sobre desarrollo de software y también sobre todo para poder tomar apuntes de las cosas que aprendo para si en futuro las llego a necesitar.',
     },
     {
+      id: 'expense-tracker',
+      title: 'ExpenseTracker - Aplicación web para controlar tus gastos',
+      description: 'ExpenseTracker es una aplicación web para controlar tus gastos, donde puedes agregar, eliminar y editar tus gastos, además de ver el total de tus gastos, filtrarlos por categorías, y observar el balance de tus ingresos y egresos.',
+      link: 'https://react-apps-221cd.web.app/',
+      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/expense-tracker_u0yp05.webp',
+      github: 'https://github.com/chicho69-cesar/expense-tracker',
+      tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.FIREBASE],
+      images: [
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/1_cshoga.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/2_o33h0r.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/3_sbo8qf.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/4_ff8q6r.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988146/portfolio/expense-tracker/5_z0lmwe.webp',
+      ],
+      multiple_repos: [],
+      full_description: 'Expense Tracker es una aplicación que desarrolle para mi uso personal, ya que me ayuda mucho a llevar el control de los gastos que tengo, además de que me permite ver en detalle como es que gasto mi dinero, y así poder ahorrar más. <br/>Esta aplicación está construida con React y JavaScript, utilicé React porque es la librería de Front-End que más me gusta y con la que más experiencia desarrollando tengo, me encanta su forma de trabajar basada en componentes, hooks y la enorme cantidad de herramientas y librerías que existen para mejorar la experiencia de desarrollo. Para el almacenamiento de la información utilicé Firebase, ya que es una herramienta muy completa y fácil de usar, además de que me permite escalar la aplicación sin problemas, también hice uso de Firebase para la autenticación de usuarios, lo que me permite tener un control de los gastos por usuario, también cabe mencionar que utilice Firebase para poder acelerar el proceso de desarrollo muchísimo. Para el diseño emplee Tailwind CSS, ya que es una herramienta que me encanta y me permite crear diseños de manera rápida y sencilla. <br/>Esta aplicación me encanta no solo porque la construí yo mismo, sino que me es sumamente útil en mi día a día para controlar mis finanzas personales.',
+    },
+    {
       id: 'shortly',
       title: 'Shortly - Shortener de URLs',
       description: 'Shortly es una aplicación web acortador de urls mediante la cual se pueden crear links personalizados, para poder acceder a los sitios web que quieras fácil y rápido, además de poder compartirlas con otras personas para acceder ellos fácilmente.',
@@ -157,6 +157,34 @@ export const PROJECTS = {
       full_description: 'Este proyecto es el resultado de una investigación desarrollada durante la materia de Taller de Investigación durante mi carrera de Ingeniería en Tecnologías de la Información y Comunicaciones, el objetivo principal de esta aplicación es ayudar a los padres con una crianza más conectada y efectiva, donde pueden encontrar apoyo, consejos y herramientas para mejorar la crianza de sus hijos. En la actualidad la tecnología avanza a pasos agigantados y la inteligencia artificial esta siendo uno de los pilares de esta revolución tecnológica, es por ello que decidimos emplear esta herramienta en la creación de una aplicación que nos permite ayudar a los padres con la crianza de sus hijos. <br/>La aplicación está desarrollada usando un stack de tecnología moderno que incluye el uso de TypeScript, Node.js, Express y TypeScript para el Back-End, además del uso de API de OpenAI para la generación de respuestas basadas en inteligencia artificial, para la base de datos utilice MongoDB, lo que me permite almacenar los datos de manera flexible y escalable, para el desarrollo de la aplicación móvil utilice React Native y Expo, mediante el lenguaje de programación TypeScript, lo que me permite crear aplicaciones móviles de manera rápida y sencilla, además de que hice uso del patron de arquitectura de software Clean Architecture, lo que me permite tener un código más limpio y fácil de mantener. <br/>Para el diseño de la aplicación utilice Figma, una herramienta de diseño de interfaces que me permite crear prototipos y diseños atractivos fácilmente. <br/>Este proyecto es el resultado de un trabajo que incluyo desde el proceso de investigación, estudio de campo realizando encuestas y entrevistas a padres de familia, la planificación y el diseño del proceso de desarrollo, hasta la implementación y testing del resultado final, el cual es una aplicación totalmente funcional que permite a los padres encontrar apoyo, consejos y herramientas para mejorar la crianza de sus hijos.',
     },
     {
+      id: 'emocean',
+      title: 'Emocean - Aplicación para el cuidado de la salud mental',
+      description: 'A través de esta aplicación los usuarios pueden desahogar sus problemas de ansiedad, depresión, tristeza y otros problemas relacionados con la salud mental. Contar con un asistente inteligente que le brinda feedback y sugerencias que le ayuden a tener actividades que mejoren su estado emocional, acceder a la comunidad de usuarios donde todos se pueden apoyar mutuamente.',
+      link: 'https://github.com/chicho69-cesar/emocean-frontend',
+      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025859/portfolio/emocean_gvtbyl.webp',
+      github: 'https://github.com/chicho69-cesar/emocean-frontend',
+      tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.OPENAI, TAGS.REACT, TAGS.EXPO],
+      images: [
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025854/portfolio/emocean/emocean-01_febt19.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-02_d942lf.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-03_ccadgk.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025856/portfolio/emocean/emocean-04_xzzrp4.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025857/portfolio/emocean/emocean-05_fjqrzu.webp',
+      ],
+      multiple_repos: [
+        {
+          name: 'Aplicación móvil',
+          link: 'https://github.com/chicho69-cesar/emocean-frontend'
+        },
+        {
+          name: 'Servidor',
+          link: 'https://github.com/chicho69-cesar/emocean-backend'
+        }
+      ],
+      demo_video: 'aDF77nrGeDo',
+      full_description: 'Emocean es una aplicación móvil que desarrollé con el objetivo de ayudar a las personas a cuidar su salud mental, ya que es un tema muy importante y que muchas veces no se le da la importancia que merece. La aplicación permite a los usuarios desahogar sus problemas de ansiedad, depresión, tristeza y otros problemas relacionados con la salud mental, además de contar con un asistente inteligente que brinda feedback y sugerencias para mejorar su estado emocional. <br/>La aplicación está desarrollada utilizando React Native y Expo, lo que me permite crear aplicaciones móviles de manera rápida y sencilla, además de que utilicé JavaScript como lenguaje de programación. Para el Back-End utilicé Node.js y Express para crear una API RESTful que permita a la aplicación móvil comunicarse con el servidor, además de que utilice OpenAI para implementar un asistente inteligente que brinda feedback y sugerencias a los usuarios. <br/>Este proyecto es muy importante para mí ya que me gracias a el puedo emplear mis conocimientos para ayudar a las personas con un tema de tanta importancia como lo es el cuidado de la salud mental.',
+    },
+    {
       id: 'ink-chat',
       title: 'INK Chat - Aplicación de chat en tiempo real',
       description: 'Ink Chat es una aplicación de chat en tiempo real, donde los usuarios pueden mandar mensajes a otras personas, ver sus mensajes, mantener un historial de mensajes, y ver los usuarios que están en línea.',
@@ -198,34 +226,6 @@ export const PROJECTS = {
       ],
       multiple_repos: [],
       full_description: 'Simple CRM es un pequeño sistema de gestión de clientes que desarrolle con la premisa de hacerlo altamente escalable y rápido, esto gracias al uso de tecnologías como lo es GraphQL el cual es un lenguaje de consulta para APIs que permite a los clientes solicitar solo los datos que necesitan, lo que reduce la cantidad de datos transferidos y mejora el rendimiento de la aplicación. <br/>El Front-End de la aplicación está construido con Next.js, un framework de React que permite crear aplicaciones web escalables y optimizadas para SEO, además de que utilice TypeScript para asegurarme de que el código sea más robusto y fácil de mantener. Para los estilos utilice Tailwind CSS, un framework de CSS que me permite crear diseños modernos y atractivos de manera rápida y sencilla. <br/>En el Back-End utilice MongoDB como base de datos NoSQL, lo que me permite almacenar los datos de manera flexible y escalable, además de que utilice GraphQL para crear una API que permita a los clientes consultar los datos de manera eficiente. <br/>Este proyecto me permitió aprender mucho sobre el uso de GraphQL y su aplicación en aplicaciones web, además de que me ayudo a mejorar mis habilidades en el desarrollo de aplicaciones web escalables y optimizadas.',
-    },
-    {
-      id: 'emocean',
-      title: 'Emocean - Aplicación para el cuidado de la salud mental',
-      description: 'A través de esta aplicación los usuarios pueden desahogar sus problemas de ansiedad, depresión, tristeza y otros problemas relacionados con la salud mental. Contar con un asistente inteligente que le brinda feedback y sugerencias que le ayuden a tener actividades que mejoren su estado emocional, acceder a la comunidad de usuarios donde todos se pueden apoyar mutuamente.',
-      link: 'https://github.com/chicho69-cesar/emocean-frontend',
-      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025859/portfolio/emocean_gvtbyl.webp',
-      github: 'https://github.com/chicho69-cesar/emocean-frontend',
-      tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.OPENAI, TAGS.REACT, TAGS.EXPO],
-      images: [
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025854/portfolio/emocean/emocean-01_febt19.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-02_d942lf.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-03_ccadgk.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025856/portfolio/emocean/emocean-04_xzzrp4.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025857/portfolio/emocean/emocean-05_fjqrzu.webp',
-      ],
-      multiple_repos: [
-        {
-          name: 'Aplicación móvil',
-          link: 'https://github.com/chicho69-cesar/emocean-frontend'
-        },
-        {
-          name: 'Servidor',
-          link: 'https://github.com/chicho69-cesar/emocean-backend'
-        }
-      ],
-      demo_video: 'aDF77nrGeDo',
-      full_description: 'Emocean es una aplicación móvil que desarrollé con el objetivo de ayudar a las personas a cuidar su salud mental, ya que es un tema muy importante y que muchas veces no se le da la importancia que merece. La aplicación permite a los usuarios desahogar sus problemas de ansiedad, depresión, tristeza y otros problemas relacionados con la salud mental, además de contar con un asistente inteligente que brinda feedback y sugerencias para mejorar su estado emocional. <br/>La aplicación está desarrollada utilizando React Native y Expo, lo que me permite crear aplicaciones móviles de manera rápida y sencilla, además de que utilicé JavaScript como lenguaje de programación. Para el Back-End utilicé Node.js y Express para crear una API RESTful que permita a la aplicación móvil comunicarse con el servidor, además de que utilice OpenAI para implementar un asistente inteligente que brinda feedback y sugerencias a los usuarios. <br/>Este proyecto es muy importante para mí ya que me gracias a el puedo emplear mis conocimientos para ayudar a las personas con un tema de tanta importancia como lo es el cuidado de la salud mental.',
     },
     {
       id: 'dio-planner',
@@ -283,24 +283,6 @@ export const PROJECTS = {
       ],
       multiple_repos: [],
       full_description: 'I developed this web application as a project for my Information and Communications Technology Engineering degree in the Big Data Analytics course. The application leverages a set of specialized data analysis and machine learning technologies, including the Python programming language and essential libraries such as Scikit-learn, Pandas, NumPy, and Matplotlib. <br/>The machine learning models were trained using datasets stored in a MongoDB non-relational database. I also created a RESTful API using Flask to connect the front-end application with the machine learning models. Subsequently, I containerized the application with Docker for deployment on an AWS EC2 instance. <br/>With the server ready to handle HTTP requests in production and perform predictions, I developed the front-end using the React Next.js framework, enabling the rapid creation of a scalable, production-ready web application. This combination of tools and technologies allowed me to build a web application capable of predicting diseases such as diabetes, hypertension, and cardiovascular conditions using machine learning models trained with real data. <br/>This project taught me a great deal about applying machine learning technologies in real-world scenarios, from data collection and selection techniques to building and implementing machine learning models in a web application.'
-    },
-    {
-      id: 'expense-tracker',
-      title: 'ExpenseTracker - Web Application for Managing Your Expenses',
-      description: 'ExpenseTracker is a web application for managing your expenses, allowing you to add, delete, and edit expenses, view total expenses, filter them by categories, and track the balance of your income and expenses.',
-      link: 'https://react-apps-221cd.web.app/',
-      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/expense-tracker_u0yp05.webp',
-      github: 'https://github.com/chicho69-cesar/expense-tracker',
-      tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.FIREBASE],
-      images: [
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/1_cshoga.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/2_o33h0r.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/3_sbo8qf.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/4_ff8q6r.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988146/portfolio/expense-tracker/5_z0lmwe.webp',
-      ],
-      multiple_repos: [],
-      full_description: 'ExpenseTracker is an application I developed for personal use to help me track my expenses and gain detailed insights into my spending habits, enabling better savings. <br/>I built this application with React and JavaScript because React is my favorite front-end library and the one I have the most development experience with. I love its component-based approach, hooks, and the vast ecosystem of tools and libraries that enhance the development experience. For data storage, I used Firebase, a comprehensive and easy-to-use tool that allows seamless application scaling. Firebase also handles user authentication, enabling expense tracking per user. Additionally, Firebase significantly accelerated the development process. For the design, I used Tailwind CSS, a tool I love for its ability to create designs quickly and easily. <br/>I love this application not only because I built it myself but also because it’s incredibly useful for managing my personal finances daily.'
     },
     {
       id: 'artisan-market',
@@ -370,6 +352,24 @@ export const PROJECTS = {
       full_description: 'Interstellar Code is a software development blog I created to share my programming and software development knowledge. The blog is built with the Astro web frameworkалина framework, chosen for its incredible simplicity and developer experience. I love how easy it is to learn and integrate with various tools. For styling, I used Tailwind CSS to quickly design and layout the website. During development, I explored many of Astro’s features, such as dynamic route generation, component usage, and Markdown integration with content collections for articles. I also implemented category sections, pagination, and dynamic routing. TypeScript was used to ensure robust and maintainable code. <br/>This project deepened my web development skills and helped me create a site I hope will be useful to other developers. I loved the development process, as it allowed me to explore new technologies, enhance my programming skills, and share my knowledge with those interested in software development. It also serves as a personal reference for future use.'
     },
     {
+      id: 'expense-tracker',
+      title: 'ExpenseTracker - Web Application for Managing Your Expenses',
+      description: 'ExpenseTracker is a web application for managing your expenses, allowing you to add, delete, and edit expenses, view total expenses, filter them by categories, and track the balance of your income and expenses.',
+      link: 'https://react-apps-221cd.web.app/',
+      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/expense-tracker_u0yp05.webp',
+      github: 'https://github.com/chicho69-cesar/expense-tracker',
+      tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.FIREBASE],
+      images: [
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/1_cshoga.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/2_o33h0r.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/3_sbo8qf.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988145/portfolio/expense-tracker/4_ff8q6r.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988146/portfolio/expense-tracker/5_z0lmwe.webp',
+      ],
+      multiple_repos: [],
+      full_description: 'ExpenseTracker is an application I developed for personal use to help me track my expenses and gain detailed insights into my spending habits, enabling better savings. <br/>I built this application with React and JavaScript because React is my favorite front-end library and the one I have the most development experience with. I love its component-based approach, hooks, and the vast ecosystem of tools and libraries that enhance the development experience. For data storage, I used Firebase, a comprehensive and easy-to-use tool that allows seamless application scaling. Firebase also handles user authentication, enabling expense tracking per user. Additionally, Firebase significantly accelerated the development process. For the design, I used Tailwind CSS, a tool I love for its ability to create designs quickly and easily. <br/>I love this application not only because I built it myself but also because it’s incredibly useful for managing my personal finances daily.'
+    },
+    {
       id: 'shortly',
       title: 'Shortly - URL Shortener',
       description: 'Shortly is a URL shortening web application that allows users to create custom links for quick and easy access to websites, which can also be shared with others.',
@@ -415,6 +415,34 @@ export const PROJECTS = {
       full_description: 'This project is the result of research conducted during my Information and Communications Technology Engineering degree in the Research Workshop course. Its main goal is to assist parents with more connected and effective parenting by providing support, advice, and tools to enhance child-rearing. With technology advancing rapidly, artificial intelligence is a cornerstone of this revolution, which is why we chose to use it to create an application that supports parents in raising their children. <br/>The application is built using a modern tech stack, including TypeScript, Node.js, Express, and TypeScript for the back-end, along with the OpenAI API for generating AI-based responses. I used MongoDB for flexible and scalable data storage. For the mobile application, I used React Native and Expo with TypeScript, enabling rapid and straightforward mobile app development. I also applied the Clean Architecture pattern to ensure clean and maintainable code. <br/>For the application’s design, I used Figma, a user interface design tool that facilitates creating attractive prototypes and designs. <br/>This project involved a comprehensive process, from research and field studies with surveys and interviews with parents to planning, development, and testing of the final product—a fully functional application that helps parents find support, advice, and tools for better parenting.'
     },
     {
+      id: 'emocean',
+      title: 'Emocean - Mental Health Care Application',
+      description: 'This application allows users to express their issues with anxiety, depression, sadness, and other mental health concerns. It features an intelligent assistant that provides feedback and suggestions for activities to improve emotional well-being, and access to a supportive user community.',
+      link: 'https://github.com/chicho69-cesar/emocean-frontend',
+      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025859/portfolio/emocean_gvtbyl.webp',
+      github: 'https://github.com/chicho69-cesar/emocean-frontend',
+      tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.OPENAI, TAGS.REACT, TAGS.EXPO],
+      images: [
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025854/portfolio/emocean/emocean-01_febt19.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-02_d942lf.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-03_ccadgk.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025856/portfolio/emocean/emocean-04_xzzrp4.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025857/portfolio/emocean/emocean-05_fjqrzu.webp',
+      ],
+      multiple_repos: [
+        {
+          name: 'Mobile Application',
+          link: 'https://github.com/chicho69-cesar/emocean-frontend'
+        },
+        {
+          name: 'Server',
+          link: 'https://github.com/chicho69-cesar/emocean-backend'
+        }
+      ],
+      demo_video: 'aDF77nrGeDo',
+      full_description: 'Emocean is a mobile application I developed to help people care for their mental health, a topic of great importance that is often overlooked. The application allows users to express their issues with anxiety, depression, sadness, and other mental health concerns, and includes an intelligent assistant that provides feedback and suggestions to improve their emotional state. <br/>The application is built using React Native and Expo with JavaScript, enabling rapid and straightforward mobile app development. For the back-end, I used Node.js and Express to create a RESTful API that connects the mobile app to the server, and OpenAI to implement an intelligent assistant that offers feedback and suggestions. <br/>This project is very meaningful to me because it allows me to apply my knowledge to help people with the critical issue of mental health care.'
+    },
+    {
       id: 'ink-chat',
       title: 'Ink Chat - Real-Time Chat Application',
       description: 'Ink Chat is a real-time chat application where users can send messages to others, view their messages, maintain a message history, and see which users are online.',
@@ -456,34 +484,6 @@ export const PROJECTS = {
       ],
       multiple_repos: [],
       full_description: 'Simple CRM is a customer management system I developed with a focus on high scalability and speed, thanks to the use of GraphQL, a query language for APIs that allows clients to request only the data they need, reducing data transfer and improving performance. <br/>The front-end is built with Next.js, a React framework that enables scalable and SEO-optimized web applications. I used TypeScript to ensure robust and maintainable code. For styling, I used Tailwind CSS, a CSS framework that allows for rapid and attractive design creation. <br/>For the back-end, I used MongoDB as a NoSQL database for flexible and scalable data storage, and GraphQL to create an efficient API for client data queries. <br/>This project taught me a lot about using GraphQL in web applications and improved my skills in developing scalable and optimized web solutions.'
-    },
-    {
-      id: 'emocean',
-      title: 'Emocean - Mental Health Care Application',
-      description: 'This application allows users to express their issues with anxiety, depression, sadness, and other mental health concerns. It features an intelligent assistant that provides feedback and suggestions for activities to improve emotional well-being, and access to a supportive user community.',
-      link: 'https://github.com/chicho69-cesar/emocean-frontend',
-      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025859/portfolio/emocean_gvtbyl.webp',
-      github: 'https://github.com/chicho69-cesar/emocean-frontend',
-      tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.OPENAI, TAGS.REACT, TAGS.EXPO],
-      images: [
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025854/portfolio/emocean/emocean-01_febt19.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-02_d942lf.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-03_ccadgk.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025856/portfolio/emocean/emocean-04_xzzrp4.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025857/portfolio/emocean/emocean-05_fjqrzu.webp',
-      ],
-      multiple_repos: [
-        {
-          name: 'Mobile Application',
-          link: 'https://github.com/chicho69-cesar/emocean-frontend'
-        },
-        {
-          name: 'Server',
-          link: 'https://github.com/chicho69-cesar/emocean-backend'
-        }
-      ],
-      demo_video: 'aDF77nrGeDo',
-      full_description: 'Emocean is a mobile application I developed to help people care for their mental health, a topic of great importance that is often overlooked. The application allows users to express their issues with anxiety, depression, sadness, and other mental health concerns, and includes an intelligent assistant that provides feedback and suggestions to improve their emotional state. <br/>The application is built using React Native and Expo with JavaScript, enabling rapid and straightforward mobile app development. For the back-end, I used Node.js and Express to create a RESTful API that connects the mobile app to the server, and OpenAI to implement an intelligent assistant that offers feedback and suggestions. <br/>This project is very meaningful to me because it allows me to apply my knowledge to help people with the critical issue of mental health care.'
     },
     {
       id: 'dio-planner',
