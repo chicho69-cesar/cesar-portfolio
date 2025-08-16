@@ -6,7 +6,7 @@ export const PROJECTS = {
     {
       id: 'healthify',
       title: 'Healthify - Aplicación web para predecir enfermedades con Machine Learning',
-      description: 'Healthify es una página web que utiliza modelos de inteligencia artificial creados con Python empleando algoritmos de aprendizaje no supervisado, aprendizaje supervisado y redes neuronales para detectar o predecir enfermedades como la diabetes, hipertensión y enfermedades cardiovasculares.',
+      description: 'Healthify es una página web que utiliza modelos de inteligencia artificial creados con Python empleando algoritmos de aprendizaje supervisado, no supervisado y redes neuronales para detectar o predecir enfermedades como la diabetes, hipertensión y enfermedades cardiovasculares.',
       link: 'https://healthify-three.vercel.app/',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/healthify_mvsx5d.webp',
       github: 'https://github.com/chicho69-cesar/healthify',
@@ -25,7 +25,7 @@ export const PROJECTS = {
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988148/portfolio/healthify/healthify-11_whama3.webp',
       ],
       multiple_repos: [],
-      full_description: 'Esta aplicación web la desarrolle como un proyecto de la carrera de Ingeniería en Tecnologías de la Información y Comunicaciones en la materia de Big Data Analytics, esta aplicación usa un conjunto de tecnologías especializadas para el análisis de datos y la creación de modelos de Machine Learning, estas herramientas incluyen en lenguaje de programación Python y algunas librerías indispensables como Scikit-learn, Pandas, NumPy y Matplotlib. <br/>Una vez construidos los modelos de Machine Learning, estos fueron entrenados utilizando conjuntos de datos almacenados en una base de datos no relacional MongoDB, además de que cree una API RESTful utilizando Flask, para poder comunicar la aplicación Front-End con los modelos de Machine Learning, posteriormente Dockerize la aplicación para realizar el despliegue del servidor en una instancia EC2 de AWS. <br/>Con el servidor listo para escuchar peticiones HTTP en producción y realizar las predicciones, lo siguiente fue desarrollar el Front-End del sitio web, para lo cual hice uso del framework de React Next.js el cual me permitió crear rápidamente una aplicación web escalable y lista para producción, todo este conjunto de herramientas y tecnologías me permitieron crear una aplicación web que puede predecir enfermedades como la diabetes, hipertensión y enfermedades cardiovasculares, utilizando modelos de Machine Learning entrenados con datos reales. <br/>Este proyecto me permitió aprender mucho sobre el uso de tecnologías de Machine Learning y su aplicación en la vida real, desde técnicas para la recolección y selección de datos, hasta la creación de modelos de Machine Learning y su implementación en una aplicación web.',
+      full_description: 'Esta aplicación web la desarrolle como un proyecto para la materia de Big Data Analytics de la carrera de Ingeniería en Tecnologías de la Información y Comunicaciones, el enfoque de aplicación es usar un conjunto de tecnologías especializadas para el análisis de datos y la creación de modelos de Machine Learning. Entre las herramientas utilizadas se incluyen el lenguaje de programación Python y algunas librerías indispensables como Scikit-learn, Pandas, NumPy y Matplotlib. <br/>Una vez construidos los modelos de Machine Learning, estos fueron entrenados utilizando conjuntos de datos almacenados en una base de datos no relacional MongoDB, además de que cree una API RESTful utilizando Flask, para poder comunicar la aplicación Front-End con los modelos de Machine Learning, posteriormente Dockerize la aplicación para realizar el despliegue del servidor en una instancia EC2 de AWS. <br/>Con el servidor listo para escuchar peticiones HTTP en producción y realizar las predicciones, lo siguiente fue desarrollar el Front-End del sitio web, para lo cual hice uso del framework de React Next.js el cual me permitió crear rápidamente una aplicación web escalable y lista para producción, todo este conjunto de herramientas y tecnologías me permitieron crear una aplicación web que puede predecir enfermedades como la diabetes, hipertensión y enfermedades cardiovasculares, utilizando modelos de Machine Learning entrenados con datos reales. <br/>Este proyecto me permitió aprender mucho sobre el uso de tecnologías de Machine Learning y su aplicación en la vida real, desde técnicas para la recolección y selección de datos, hasta la creación de modelos de Machine Learning y su implementación en una aplicación web.<br/>Pero no solo me quedo con todo lo que aprendí realizando este proyecto, sino que también el proceso que me permitió llegar al resultado final, ya que este proyecto es el resultado de un arduo trabajo de investigación, planificación y trabajo en equipo, además de que fue un proyecto que presentamos frente a un jurado de profesores expertos en el tema, lo cual me ayudo bastante a mejorar mis habilidades de comunicación y presentación de proyectos.',
     },
     {
       id: 'artisan-market',
@@ -113,6 +113,31 @@ export const PROJECTS = {
       full_description: 'Expense Tracker es una aplicación que desarrolle para mi uso personal, ya que me ayuda mucho a llevar el control de los gastos que tengo, además de que me permite ver en detalle como es que gasto mi dinero, y así poder ahorrar más. <br/>Esta aplicación está construida con React y JavaScript, utilicé React porque es la librería de Front-End que más me gusta y con la que más experiencia desarrollando tengo, me encanta su forma de trabajar basada en componentes, hooks y la enorme cantidad de herramientas y librerías que existen para mejorar la experiencia de desarrollo. Para el almacenamiento de la información utilicé Firebase, ya que es una herramienta muy completa y fácil de usar, además de que me permite escalar la aplicación sin problemas, también hice uso de Firebase para la autenticación de usuarios, lo que me permite tener un control de los gastos por usuario, también cabe mencionar que utilice Firebase para poder acelerar el proceso de desarrollo muchísimo. Para el diseño emplee Tailwind CSS, ya que es una herramienta que me encanta y me permite crear diseños de manera rápida y sencilla. <br/>Esta aplicación me encanta no solo porque la construí yo mismo, sino que me es sumamente útil en mi día a día para controlar mis finanzas personales.',
     },
     {
+      id: 'gymrat',
+      title: 'Gymrat - Aplicación móvil para gestionar rutinas de entrenamiento',
+      description: 'Gymrat es una aplicación móvil que le permite a los usuarios gestionar sus rutinas de entrenamiento, crear un seguimiento de ejercicios, series, rutinas y más, además de que cuenta con un sistema de estadísticas y funciona totalmente offline.',
+      link: 'https://github.com/chicho69-cesar/gymrat',
+      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372274/portfolio/gymrat_h5kgui.webp',
+      github: 'https://github.com/chicho69-cesar/gymrat',
+      tags: [TAGS.TYPESCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.SQLITE, TECH.ZUSTAND],
+      images: [
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372295/portfolio/gymrat/gymrat-01_xvktog.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372296/portfolio/gymrat/gymrat-02_p0tqhd.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372296/portfolio/gymrat/gymrat-03_whmeyp.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372296/portfolio/gymrat/gymrat-04_i6t79i.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372298/portfolio/gymrat/gymrat-05_snjmhi.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372298/portfolio/gymrat/gymrat-06_lojqz4.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372298/portfolio/gymrat/gymrat-07_yirmcf.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372298/portfolio/gymrat/gymrat-08_e0pcor.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372302/portfolio/gymrat/gymrat-09_yg2yv6.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372302/portfolio/gymrat/gymrat-10_qwfsmx.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372302/portfolio/gymrat/gymrat-11_jsiqo3.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372303/portfolio/gymrat/gymrat-12_huh51c.webp',
+      ],
+      multiple_repos: [],
+      full_description: 'GymRat es una aplicación móvil desarrollada con React Native y Expo mediante la cual se le permite a los usuarios gestionar sus rutinas de ejercicio, días de entrenamiento y seguimiento de progreso. La aplicación está construida siguiendo los principios de Clean Architecture para mantener el código organizado, escalable y fácil de mantener.<br/>La aplicación la he desarrollado con el lenguaje de programación TypeScript, lo que proporciona una mayor seguridad de tipos y facilita el desarrollo. Para el almacenamiento de datos utilizo una base de datos local con SQLite utilizando el paquete de Expo Go llamada \'expo-sqlite\', una base de datos ligera y eficiente que permite a la aplicación funcionar sin conexión a Internet, lo que es ideal para usuarios que entrenan en lugares sin acceso a la red.<br/>Además, GymRat implementa Zustand como gestor de estado, lo que simplifica la gestión del estado global de la aplicación y mejora la experiencia del usuario al permitir un acceso rápido y eficiente a los datos.<br/>Esta aplicación es perfecta para aquellos que buscan llevar un control detallado de sus rutinas de entrenamiento y progreso físico, todo desde la comodidad de su dispositivo móvil.<br/>Durante el desarrollo de este proyecto pude explorar el uso de Clean Architecture en aplicaciones móviles, lo que me ayudo a mejorar mis habilidades en la organización del código y la escalabilidad de la aplicación, el uso de esta arquitectura de software es muy importante ya que si en futuro decido implementar un Back-End para almacenar la información en lugar de utilizar una base de datos local, sera muy fácil implementarlo, ya que simplemente necesitare emplear datasources que se comuniquen con el Back-End en vez de la base de datos SQLite.<br/>En general puedo decir que la aplicación Gymrat me encanta, ya que me ayuda a llevar un control de mis entrenamientos, algo que es muy util para mi día a día, ya que además de ser un apasionado del desarrollo de software, también me encanta hacer ejercicio y progresar en mis entrenamientos y con esta app lo puedo hacer de una manera muy sencilla y rápida.',
+    },
+    {
       id: 'shortly',
       title: 'Shortly - Shortener de URLs',
       description: 'Shortly es una aplicación web acortador de urls mediante la cual se pueden crear links personalizados, para poder acceder a los sitios web que quieras fácil y rápido, además de poder compartirlas con otras personas para acceder ellos fácilmente.',
@@ -186,24 +211,6 @@ export const PROJECTS = {
       full_description: 'Emocean es una aplicación móvil que desarrollé con el objetivo de ayudar a las personas a cuidar su salud mental, ya que es un tema muy importante y que muchas veces no se le da la importancia que merece. La aplicación permite a los usuarios desahogar sus problemas de ansiedad, depresión, tristeza y otros problemas relacionados con la salud mental, además de contar con un asistente inteligente que brinda feedback y sugerencias para mejorar su estado emocional. <br/>La aplicación está desarrollada utilizando React Native y Expo, lo que me permite crear aplicaciones móviles de manera rápida y sencilla, además de que utilicé JavaScript como lenguaje de programación. Para el Back-End utilicé Node.js y Express para crear una API RESTful que permita a la aplicación móvil comunicarse con el servidor, además de que utilice OpenAI para implementar un asistente inteligente que brinda feedback y sugerencias a los usuarios. <br/>Este proyecto es muy importante para mí ya que me gracias a el puedo emplear mis conocimientos para ayudar a las personas con un tema de tanta importancia como lo es el cuidado de la salud mental.',
     },
     {
-      id: 'ink-chat',
-      title: 'INK Chat - Aplicación de chat en tiempo real',
-      description: 'Ink Chat es una aplicación de chat en tiempo real, donde los usuarios pueden mandar mensajes a otras personas, ver sus mensajes, mantener un historial de mensajes, y ver los usuarios que están en línea.',
-      link: 'https://ink-chat-pi.vercel.app/',
-      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988154/portfolio/ink-chat_dljasz.webp',
-      github: 'https://github.com/chicho69-cesar/ink-chat',
-      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODE, TAGS.POSTGRESQL, TECH.SOCKETIO],
-      images: [
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988148/portfolio/ink-chat/1_lfw70j.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/2_iayzju.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/3_zzwhmo.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/4_ytxhft.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/5_bkdnco.webp',
-      ],
-      multiple_repos: [],
-      full_description: 'Ink Chat es una aplicación de chat en tiempo real, la cual la cree utilizando un Stack de tecnologías, que incluyen a React como librería de Front-End, Express y NodeJS para crear el Back-End del proyecto, y PostgreSQL como base de datos para almacenar los mensajes y la información de los usuarios, además de que tanto para el Front-End como para el Back-End utilice el lenguaje de programación TypeScript, lo que me permite tener un tipado de datos más fuerte y asi evitar errores desde la etapa de desarrollo. <br/>Lo más importante de la aplicación es las librerías y herramientas que utilice para construirla, en el Front-End hice uso de la librería de UI Shadcn, la cual es una librería de componentes UI sumamente popular y utilizada para crear sitios web modernos y atractivos, para la comunicación en tiempo real utilice Socket.IO, una librería que permite la comunicación en tiempo real entre el cliente y el servidor usando WebSockets. <br/>En el Back-End utilice Express, un framework de Node.js que facilita la creación de aplicaciones web y APIs, y PostgreSQL como base de datos relacional para almacenar los mensajes y la información de los usuarios. <br/>Me encanto el proceso de desarrollo de esta aplicación, ya que me ayudo a aprender mucho sobre el uso de tecnologías como los WebSockets para la comunicación en tiempo real, y sus aplicaciones comunes en las aplicaciones web.',
-    },
-    {
       id: 'simple-crm',
       title: 'Simple CRM - Aplicación de gestión de clientes',
       description: 'Simple CRM es una aplicación de gestión de clientes, donde se puede ver la información de los clientes de tu negocio, empleados, productos, ventas y más.',
@@ -259,6 +266,24 @@ export const PROJECTS = {
       ],
       full_description: 'La aplicación de dioPlanner para la planificación de eventos es una solución completa que tiene como objetivo ayudar a los usuarios a organizar y gestionar eventos de manera eficiente y sin complicaciones. Con esta aplicación, los usuarios pueden planificar una amplia gama de eventos, como fiestas y reuniones, al ofrecer herramientas integrales de gestión de invitaciones, presupuestos, listas de tareas y más. <br/>El proceso de creación de eventos es sencillo y personalizable. Los usuarios pueden especificar los detalles fundamentales de cada evento, como el nombre, la fecha, la hora, el lugar y el tipo de evento. Esto permitirá una fácil organización y seguimiento de los eventos en un calendario intuitivo. <br/>En la aplicación los usuarios pueden crear un evento especificando detalles como el nombre del evento, fecha y hora, lugar, tipo de evento, etc. Entre las características principales de la gestión de los eventos destacan la gestión de invitados, lista de tareas, gestión de presupuestos, lista de compras, compartir recuerdos del evento, retroalimentación de los invitados, y mucho más. <br/>La aplicación está desarrollada utilizando Go como lenguaje de programación para el Back-End, lo que me permite crear aplicaciones web escalables y eficientes, además de que utilice PostgreSQL como base de datos para almacenar la información de los eventos, usuarios e invitados. Para el Front-End utilice React y Expo para crear una aplicación móvil que permita a los usuarios gestionar sus eventos desde cualquier lugar.',
     },
+    {
+      id: 'ink-chat',
+      title: 'INK Chat - Aplicación de chat en tiempo real',
+      description: 'Ink Chat es una aplicación de chat en tiempo real, donde los usuarios pueden mandar mensajes a otras personas, ver sus mensajes, mantener un historial de mensajes, y ver los usuarios que están en línea.',
+      link: 'https://ink-chat-pi.vercel.app/',
+      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988154/portfolio/ink-chat_dljasz.webp',
+      github: 'https://github.com/chicho69-cesar/ink-chat',
+      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODE, TAGS.POSTGRESQL, TECH.SOCKETIO],
+      images: [
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988148/portfolio/ink-chat/1_lfw70j.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/2_iayzju.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/3_zzwhmo.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/4_ytxhft.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/5_bkdnco.webp',
+      ],
+      multiple_repos: [],
+      full_description: 'Ink Chat es una aplicación de chat en tiempo real, la cual la cree utilizando un Stack de tecnologías, que incluyen a React como librería de Front-End, Express y NodeJS para crear el Back-End del proyecto, y PostgreSQL como base de datos para almacenar los mensajes y la información de los usuarios, además de que tanto para el Front-End como para el Back-End utilice el lenguaje de programación TypeScript, lo que me permite tener un tipado de datos más fuerte y asi evitar errores desde la etapa de desarrollo. <br/>Lo más importante de la aplicación es las librerías y herramientas que utilice para construirla, en el Front-End hice uso de la librería de UI Shadcn, la cual es una librería de componentes UI sumamente popular y utilizada para crear sitios web modernos y atractivos, para la comunicación en tiempo real utilice Socket.IO, una librería que permite la comunicación en tiempo real entre el cliente y el servidor usando WebSockets. <br/>En el Back-End utilice Express, un framework de Node.js que facilita la creación de aplicaciones web y APIs, y PostgreSQL como base de datos relacional para almacenar los mensajes y la información de los usuarios. <br/>Me encanto el proceso de desarrollo de esta aplicación, ya que me ayudo a aprender mucho sobre el uso de tecnologías como los WebSockets para la comunicación en tiempo real, y sus aplicaciones comunes en las aplicaciones web.',
+    },
   ],
   'en': [
     {
@@ -283,7 +308,7 @@ export const PROJECTS = {
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988148/portfolio/healthify/healthify-11_whama3.webp',
       ],
       multiple_repos: [],
-      full_description: 'I developed this web application as a project for my Information and Communications Technology Engineering degree in the Big Data Analytics course. The application leverages a set of specialized data analysis and machine learning technologies, including the Python programming language and essential libraries such as Scikit-learn, Pandas, NumPy, and Matplotlib. <br/>The machine learning models were trained using datasets stored in a MongoDB non-relational database. I also created a RESTful API using Flask to connect the front-end application with the machine learning models. Subsequently, I containerized the application with Docker for deployment on an AWS EC2 instance. <br/>With the server ready to handle HTTP requests in production and perform predictions, I developed the front-end using the React Next.js framework, enabling the rapid creation of a scalable, production-ready web application. This combination of tools and technologies allowed me to build a web application capable of predicting diseases such as diabetes, hypertension, and cardiovascular conditions using machine learning models trained with real data. <br/>This project taught me a great deal about applying machine learning technologies in real-world scenarios, from data collection and selection techniques to building and implementing machine learning models in a web application.'
+      full_description: 'This web application was developed as a project for the Big Data Analytics course in the Information and Communication Technologies Engineering degree. The focus of the application is to use a set of specialized technologies for data analysis and the creation of Machine Learning models. Among the tools used are the Python programming language and some essential libraries such as Scikit-learn, Pandas, NumPy, and Matplotlib. <br/>Once the Machine Learning models were built, they were trained using datasets stored in a non-relational MongoDB database. In addition, I created a RESTful API using Flask to connect the Front-End application with the Machine Learning models, and later Dockerized the application to deploy the server on an AWS EC2 instance. <br/>With the server ready to listen to HTTP requests in production and perform predictions, the next step was to develop the Front-End of the website, for which I used the React Next.js framework, which allowed me to quickly create a scalable and production-ready web application. This entire set of tools and technologies enabled me to build a web application capable of predicting diseases such as diabetes, hypertension, and cardiovascular conditions, using Machine Learning models trained with real data. <br/>This project allowed me to learn a lot about the use of Machine Learning technologies and their application in real life, from techniques for data collection and selection to the creation of Machine Learning models and their implementation in a web application.<br/>But I don’t just take with me everything I learned from developing this project, but also the process that allowed me to reach the final result, since this project is the outcome of extensive research, planning, and teamwork. Moreover, it was a project we presented in front of a jury of expert professors in the field, which greatly helped me improve my communication and project presentation skills.'
     },
     {
       id: 'artisan-market',
@@ -371,6 +396,31 @@ export const PROJECTS = {
       full_description: 'ExpenseTracker is an application I developed for personal use to help me track my expenses and gain detailed insights into my spending habits, enabling better savings. <br/>I built this application with React and JavaScript because React is my favorite front-end library and the one I have the most development experience with. I love its component-based approach, hooks, and the vast ecosystem of tools and libraries that enhance the development experience. For data storage, I used Firebase, a comprehensive and easy-to-use tool that allows seamless application scaling. Firebase also handles user authentication, enabling expense tracking per user. Additionally, Firebase significantly accelerated the development process. For the design, I used Tailwind CSS, a tool I love for its ability to create designs quickly and easily. <br/>I love this application not only because I built it myself but also because it’s incredibly useful for managing my personal finances daily.'
     },
     {
+      id: 'gymrat',
+      title: 'Gymrat - Mobile Application for Fitness and Workout Tracking',
+      description: 'Gymrat is a mobile application for fitness enthusiasts, allowing users to track their workouts, create custom routines, and monitor their progress over time.',
+      link: 'https://github.com/chicho69-cesar/gymrat',
+      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372274/portfolio/gymrat_h5kgui.webp',
+      github: 'https://github.com/chicho69-cesar/gymrat',
+      tags: [TAGS.TYPESCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.SQLITE, TECH.ZUSTAND],
+      images: [
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372295/portfolio/gymrat/gymrat-01_xvktog.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372296/portfolio/gymrat/gymrat-02_p0tqhd.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372296/portfolio/gymrat/gymrat-03_whmeyp.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372296/portfolio/gymrat/gymrat-04_i6t79i.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372298/portfolio/gymrat/gymrat-05_snjmhi.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372298/portfolio/gymrat/gymrat-06_lojqz4.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372298/portfolio/gymrat/gymrat-07_yirmcf.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372298/portfolio/gymrat/gymrat-08_e0pcor.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372302/portfolio/gymrat/gymrat-09_yg2yv6.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372302/portfolio/gymrat/gymrat-10_qwfsmx.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372302/portfolio/gymrat/gymrat-11_jsiqo3.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1755372303/portfolio/gymrat/gymrat-12_huh51c.webp',
+      ],
+      multiple_repos: [],
+      full_description: 'GymRat is a mobile application developed with React Native and Expo that allows users to manage their workout routines, training days, and progress tracking. The application is built following the principles of Clean Architecture to keep the code organized, scalable, and easy to maintain.<br/>The application was developed using the TypeScript programming language, which provides greater type safety and facilitates development. For data storage, I use a local database with SQLite through the Expo Go package called \'expo-sqlite\', a lightweight and efficient database that allows the app to work offline, which is ideal for users training in places without network access.<br/>In addition, GymRat implements Zustand as a state manager, which simplifies global state management in the application and improves the user experience by enabling fast and efficient access to data.<br/>This application is perfect for those looking to keep detailed control of their training routines and physical progress, all from the convenience of their mobile device.<br/>During the development of this project, I was able to explore the use of Clean Architecture in mobile applications, which helped me improve my skills in code organization and application scalability. The use of this software architecture is very important because if in the future I decide to implement a Back-End to store the information instead of using a local database, it will be very easy to implement since I would simply need to use datasources that communicate with the Back-End instead of the SQLite database.<br/>Overall, I can say that I really love the GymRat app, as it helps me keep track of my workouts, something that is very useful in my daily life. Besides being passionate about software development, I also love working out and progressing in my training, and with this app, I can do it in a very simple and fast way.',
+    },
+    {
       id: 'shortly',
       title: 'Shortly - URL Shortener',
       description: 'Shortly is a URL shortening web application that allows users to create custom links for quick and easy access to websites, which can also be shared with others.',
@@ -444,24 +494,6 @@ export const PROJECTS = {
       full_description: 'Emocean is a mobile application I developed to help people care for their mental health, a topic of great importance that is often overlooked. The application allows users to express their issues with anxiety, depression, sadness, and other mental health concerns, and includes an intelligent assistant that provides feedback and suggestions to improve their emotional state. <br/>The application is built using React Native and Expo with JavaScript, enabling rapid and straightforward mobile app development. For the back-end, I used Node.js and Express to create a RESTful API that connects the mobile app to the server, and OpenAI to implement an intelligent assistant that offers feedback and suggestions. <br/>This project is very meaningful to me because it allows me to apply my knowledge to help people with the critical issue of mental health care.'
     },
     {
-      id: 'ink-chat',
-      title: 'Ink Chat - Real-Time Chat Application',
-      description: 'Ink Chat is a real-time chat application where users can send messages to others, view their messages, maintain a message history, and see which users are online.',
-      link: 'https://ink-chat-pi.vercel.app/',
-      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988154/portfolio/ink-chat_dljasz.webp',
-      github: 'https://github.com/chicho69-cesar/ink-chat',
-      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODE, TAGS.POSTGRESQL, TECH.SOCKETIO],
-      images: [
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988148/portfolio/ink-chat/1_lfw70j.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/2_iayzju.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/3_zzwhmo.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/4_ytxhft.webp',
-        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/5_bkdnco.webp',
-      ],
-      multiple_repos: [],
-      full_description: 'Ink Chat is a real-time chat application built using a tech stack that includes React for the front-end, Express and Node.js for the back-end, and PostgreSQL for storing messages and user information. I used TypeScript for both the front-end and back-end to ensure stronger typing and reduce errors during development. <br/>The application’s key feature is its use of libraries and tools like Shadcn UI, a popular UI component library for creating modern and attractive websites, and Socket.IO for real-time communication between client and server using WebSockets. <br/>For the back-end, I used Express, a Node.js framework that simplifies web application and API development, and PostgreSQL as the relational database for storing messages and user data. <br/>I loved the development process, as it taught me a lot about using WebSockets for real-time communication and their common applications in web development.'
-    },
-    {
       id: 'simple-crm',
       title: 'Simple CRM - Customer Management Application',
       description: 'Simple CRM is a customer management application where you can view information about your business’s customers, employees, products, sales, and more.',
@@ -516,6 +548,24 @@ export const PROJECTS = {
         }
       ],
       full_description: 'The Dio Planner event planning application is a comprehensive solution designed to help users organize and manage events efficiently and effortlessly. With this application, users can plan a wide range of events, such as parties and gatherings, using comprehensive tools for managing invitations, budgets, task lists, and more. <br/>The event creation process is simple and customizable. Users can specify key event details, such as the name, date, time, location, and event type, enabling easy organization and tracking in an intuitive calendar. <br/>Key features include guest management, task lists, budget management, shopping lists, sharing event memories, guest feedback, and more. <br/>The application is built using Go for the back-end, enabling scalable and efficient web applications, and PostgreSQL for storing event, user, and guest information. For the front-end, I used React and Expo to create a mobile application that allows users to manage their events from anywhere.'
-    }
+    },
+    {
+      id: 'ink-chat',
+      title: 'Ink Chat - Real-Time Chat Application',
+      description: 'Ink Chat is a real-time chat application where users can send messages to others, view their messages, maintain a message history, and see which users are online.',
+      link: 'https://ink-chat-pi.vercel.app/',
+      image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988154/portfolio/ink-chat_dljasz.webp',
+      github: 'https://github.com/chicho69-cesar/ink-chat',
+      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODE, TAGS.POSTGRESQL, TECH.SOCKETIO],
+      images: [
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988148/portfolio/ink-chat/1_lfw70j.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/2_iayzju.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/3_zzwhmo.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/4_ytxhft.webp',
+        'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/5_bkdnco.webp',
+      ],
+      multiple_repos: [],
+      full_description: 'Ink Chat is a real-time chat application built using a tech stack that includes React for the front-end, Express and Node.js for the back-end, and PostgreSQL for storing messages and user information. I used TypeScript for both the front-end and back-end to ensure stronger typing and reduce errors during development. <br/>The application’s key feature is its use of libraries and tools like Shadcn UI, a popular UI component library for creating modern and attractive websites, and Socket.IO for real-time communication between client and server using WebSockets. <br/>For the back-end, I used Express, a Node.js framework that simplifies web application and API development, and PostgreSQL as the relational database for storing messages and user data. <br/>I loved the development process, as it taught me a lot about using WebSockets for real-time communication and their common applications in web development.'
+    },
   ]
 }
