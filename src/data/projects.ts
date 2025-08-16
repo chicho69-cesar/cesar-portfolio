@@ -1,4 +1,5 @@
 import { TAGS } from './tags'
+import { TECH } from './tech'
 
 export const PROJECTS = {
   'es': [
@@ -33,7 +34,7 @@ export const PROJECTS = {
       link: 'https://artisan-market.netlify.app/',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/artisan-market_y0vnpv.webp',
       github: 'https://github.com/chicho69-cesar/artisan-market-web',
-      tags: [TAGS.LARAVEL, TAGS.MYSQL, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.TAILWIND, TAGS.DOCKER, TAGS.DIGITALOCEAN, TAGS.FIGMA],
+      tags: [TAGS.LARAVEL, TAGS.MYSQL, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.TAILWIND, TAGS.DOCKER, TECH.DIGITALOCEAN, TECH.FIGMA, TECH.ZUSTAND],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988138/portfolio/artisan-market/artisan-market-01_l0nrib.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988138/portfolio/artisan-market/artisan-market-02_j4lo8n.webp',
@@ -138,7 +139,7 @@ export const PROJECTS = {
       link: 'https://github.com/chicho69-cesar/tecnocria',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753027645/portfolio/tecnocria_mtq3re.webp',
       github: 'https://github.com/chicho69-cesar/tecnocria',
-      tags: [TAGS.TYPESCRIPT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB, TAGS.REACT, TAGS.EXPO, TAGS.DOCKER, TAGS.FIGMA, TAGS.GITHUBACTIONS, TAGS.OPENAI],
+      tags: [TAGS.TYPESCRIPT, TAGS.NODE, TAGS.EXPRESS, TAGS.MONGODB, TAGS.REACT, TAGS.EXPO, TAGS.DOCKER, TECH.FIGMA, TAGS.GITHUBACTIONS, TECH.OPENAI, TECH.ZUSTAND, TECH.SOCKETIO],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753027629/portfolio/tecnocria/tecnocria-01_zyyp6c.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753027629/portfolio/tecnocria/tecnocria-02_bdivsz.webp',
@@ -163,7 +164,7 @@ export const PROJECTS = {
       link: 'https://github.com/chicho69-cesar/emocean-frontend',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025859/portfolio/emocean_gvtbyl.webp',
       github: 'https://github.com/chicho69-cesar/emocean-frontend',
-      tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.OPENAI, TAGS.REACT, TAGS.EXPO],
+      tags: [TAGS.JAVASCRIPT, TAGS.NODE, TAGS.EXPRESS, TECH.OPENAI, TAGS.REACT, TAGS.EXPO, TECH.ZUSTAND],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025854/portfolio/emocean/emocean-01_febt19.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-02_d942lf.webp',
@@ -191,7 +192,7 @@ export const PROJECTS = {
       link: 'https://ink-chat-pi.vercel.app/',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988154/portfolio/ink-chat_dljasz.webp',
       github: 'https://github.com/chicho69-cesar/ink-chat',
-      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODEJS, TAGS.POSTGRESQL],
+      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODE, TAGS.POSTGRESQL, TECH.SOCKETIO],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988148/portfolio/ink-chat/1_lfw70j.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/2_iayzju.webp',
@@ -209,7 +210,7 @@ export const PROJECTS = {
       link: 'https://simple-crm-dusky.vercel.app',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/crm_ahvtuv.webp',
       github: 'https://github.com/chicho69-cesar/crm',
-      tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.MONGODB, TAGS.GRAPHQL],
+      tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.MONGODB, TAGS.GRAPHQL, TECH.APOLLO, TECH.REDUX],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988142/portfolio/crm/crm-01_mjpc8e.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988142/portfolio/crm/crm-02_fle0vb.webp',
@@ -234,7 +235,7 @@ export const PROJECTS = {
       link: 'https://github.com/chicho69-cesar/dio-planner-front',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753028896/portfolio/dio-planner_khgwii.webp',
       github: 'https://github.com/chicho69-cesar/dio-planner-front',
-      tags: [TAGS.GO, TAGS.POSTGRESQL, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.AWS],
+      tags: [TAGS.GO, TAGS.POSTGRESQL, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.AWS, TECH.ZUSTAND],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753028882/portfolio/dio-planner/dio-planner-01_bnsp9c.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753028883/portfolio/dio-planner/dio-planner-02_fuj6bh.webp',
@@ -291,7 +292,7 @@ export const PROJECTS = {
       link: 'https://artisan-market.netlify.app/',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/artisan-market_y0vnpv.webp',
       github: 'https://github.com/chicho69-cesar/artisan-market-web',
-      tags: [TAGS.LARAVEL, TAGS.MYSQL, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.TAILWIND, TAGS.DOCKER, TAGS.DIGITALOCEAN, TAGS.FIGMA],
+      tags: [TAGS.LARAVEL, TAGS.MYSQL, TAGS.TYPESCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.TAILWIND, TAGS.DOCKER, TECH.DIGITALOCEAN, TECH.FIGMA, TECH.ZUSTAND],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988138/portfolio/artisan-market/artisan-market-01_l0nrib.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988138/portfolio/artisan-market/artisan-market-02_j4lo8n.webp',
@@ -396,7 +397,7 @@ export const PROJECTS = {
       link: 'https://github.com/chicho69-cesar/tecnocria',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753027645/portfolio/tecnocria_mtq3re.webp',
       github: 'https://github.com/chicho69-cesar/tecnocria',
-      tags: [TAGS.TYPESCRIPT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB, TAGS.REACT, TAGS.EXPO, TAGS.DOCKER, TAGS.FIGMA, TAGS.GITHUBACTIONS, TAGS.OPENAI],
+      tags: [TAGS.TYPESCRIPT, TAGS.NODE, TAGS.EXPRESS, TAGS.MONGODB, TAGS.REACT, TAGS.EXPO, TAGS.DOCKER, TECH.FIGMA, TAGS.GITHUBACTIONS, TECH.OPENAI, TECH.ZUSTAND, TECH.SOCKETIO],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753027629/portfolio/tecnocria/tecnocria-01_zyyp6c.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753027629/portfolio/tecnocria/tecnocria-02_bdivsz.webp',
@@ -421,7 +422,7 @@ export const PROJECTS = {
       link: 'https://github.com/chicho69-cesar/emocean-frontend',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025859/portfolio/emocean_gvtbyl.webp',
       github: 'https://github.com/chicho69-cesar/emocean-frontend',
-      tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.EXPRESS, TAGS.OPENAI, TAGS.REACT, TAGS.EXPO],
+      tags: [TAGS.JAVASCRIPT, TAGS.NODE, TAGS.EXPRESS, TECH.OPENAI, TAGS.REACT, TAGS.EXPO, TECH.ZUSTAND],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025854/portfolio/emocean/emocean-01_febt19.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753025855/portfolio/emocean/emocean-02_d942lf.webp',
@@ -449,7 +450,7 @@ export const PROJECTS = {
       link: 'https://ink-chat-pi.vercel.app/',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988154/portfolio/ink-chat_dljasz.webp',
       github: 'https://github.com/chicho69-cesar/ink-chat',
-      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODEJS, TAGS.POSTGRESQL],
+      tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.EXPRESS, TAGS.NODE, TAGS.POSTGRESQL, TECH.SOCKETIO],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988148/portfolio/ink-chat/1_lfw70j.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988149/portfolio/ink-chat/2_iayzju.webp',
@@ -467,7 +468,7 @@ export const PROJECTS = {
       link: 'https://simple-crm-dusky.vercel.app',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988153/portfolio/crm_ahvtuv.webp',
       github: 'https://github.com/chicho69-cesar/crm',
-      tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.MONGODB, TAGS.GRAPHQL],
+      tags: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.MONGODB, TAGS.GRAPHQL, TECH.APOLLO, TECH.REDUX],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988142/portfolio/crm/crm-01_mjpc8e.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1752988142/portfolio/crm/crm-02_fle0vb.webp',
@@ -492,7 +493,7 @@ export const PROJECTS = {
       link: 'https://github.com/chicho69-cesar/dio-planner-front',
       image: 'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753028896/portfolio/dio-planner_khgwii.webp',
       github: 'https://github.com/chicho69-cesar/dio-planner-front',
-      tags: [TAGS.GO, TAGS.POSTGRESQL, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.AWS],
+      tags: [TAGS.GO, TAGS.POSTGRESQL, TAGS.JAVASCRIPT, TAGS.REACT, TAGS.EXPO, TAGS.AWS, TECH.ZUSTAND],
       images: [
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753028882/portfolio/dio-planner/dio-planner-01_bnsp9c.webp',
         'https://res.cloudinary.com/dtqilcsm8/image/upload/v1753028883/portfolio/dio-planner/dio-planner-02_fuj6bh.webp',
