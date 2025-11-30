@@ -2,14 +2,14 @@ export const hero = {
   'es': {
     greeting: 'Hola, soy',
     available: 'Disponible para trabajar',
-    experience: '+1,5 años de experiencia.',
+    experience: '+2 años de experiencia.',
     description: 'Apasionado Ingeniero de Software y desarrollador Full-Stack, especializado en crear aplicaciones web y móviles únicas que transforman la forma en que las personas interactúan con la tecnología.',
     download: 'Descargar CV',
   },
   'en': {
     greeting: 'Hi, I am',
     available: 'Available for work',
-    experience: '+1.5 years of experience.',
+    experience: '+2 years of experience.',
     description: 'Passionate Software Engineer and Full-Stack developer, specialized in creating unique web and mobile applications that transform the way people interact with technology.',
     download: 'Download CV',
   },
